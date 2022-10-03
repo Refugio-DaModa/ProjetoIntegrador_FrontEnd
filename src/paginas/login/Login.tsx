@@ -12,7 +12,7 @@ function Login()
                 <Box paddingX={20}>
                     <form>
                     <Box className="sombra">
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className="textos1">
+                        <Typography variant="h4" gutterBottom color="textPrimary" align="center" className="textos1">
                             Login
                         </Typography>
                         <TextField id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
@@ -24,24 +24,22 @@ function Login()
                                 </Button>
                             </Link>
                         </Box>
-                        <Typography  gutterBottom color="blue" align="center" className="espaco">
-                            Esqueci minha senha
-                        </Typography>
-                        <Typography  gutterBottom color="textPrimary" align="center" className="ou">
-                            --------------------   OU   --------------------
-                        </Typography>
+                            <Typography  gutterBottom color="blue" align="center" className="espaco">
+                                Esqueci minha senha
+                            </Typography>
+                            <Typography  gutterBottom color="textPrimary" align="center" className="ou">
+                                --------------------   OU   --------------------
+                            </Typography>
+                            <Typography variant="h5" gutterBottom color="black" align="center" className="crie">
+                                Crie uma conta
+                            </Typography>
+                            <Link to="" className="text-decorator-none"> {/* colocar o link do direcionamento */}
+                                <Button type="submit" variant="contained" color="primary" fullWidth>
+                                    Cadastre-se
+                                </Button>
+                            </Link>
                     </Box>
                     </form>
-                    <Box display="flex" justifyContent="center" marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant="subtitle1" gutterBottom align="center">
-                                Não tem uma conta?
-                            </Typography>
-                        </Box>
-                        <Typography variant="subtitle1" gutterBottom align="center" className="textos1">
-                            Cadastre-se
-                        </Typography>
-                    </Box>
                 </Box>
             </Grid>
 
