@@ -12,18 +12,24 @@ function Login()
                 <Box paddingX={20}>
                     <form>
                     <Box className="sombra">
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="textos1">
-                            Entrar
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className="textos1">
+                            Login
                         </Typography>
                         <TextField id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
                         <TextField id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
                         <Box marginTop={2} textAlign="center">
                             <Link to="/home" className="text-decorator-none">
-                                <Button type="submit" variant="contained" color="primary">
-                                    Logar
+                                <Button type="submit" variant="contained" color="primary" fullWidth>
+                                    Entrar
                                 </Button>
                             </Link>
                         </Box>
+                        <Typography  gutterBottom color="blue" align="center" className="espaco">
+                            Esqueci minha senha
+                        </Typography>
+                        <Typography  gutterBottom color="textPrimary" align="center" className="ou">
+                            --------------------   OU   --------------------
+                        </Typography>
                     </Box>
                     </form>
                     <Box display="flex" justifyContent="center" marginTop={2}>

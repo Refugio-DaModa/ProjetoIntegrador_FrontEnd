@@ -3,6 +3,11 @@
     font-weight: bold;
 }
 
+.espaco
+{
+    padding-top: 1rem;
+}
+
 .imagem
 {
     background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
@@ -18,7 +23,27 @@
     text-decoration: none;
 }
 
-.sombra:hover
+.sombra
 {
-    filter: drop-shadow(2px 2px 2px );
+    width: 100%;
+    max-width: 500px;
+    margin: 120px auto 0;
+    background: #fff;
+    box-shadow: 0px 5px 20px;
+    padding: 1rem 2rem;
+    
+}
+
+.ou
+{
+    position: relative;
+    margin: 20px 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.crie
+{
+    padding-top: 1rem;
+    font-size: 32px;
 }
