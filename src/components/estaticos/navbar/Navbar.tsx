@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: 'auto',
             },          
         },
-        //
+        //É só a lupa em si. Esse aqui também colore 
         searchIcon: {
             padding: theme.spacing(0, 2),
             height: '100%',
@@ -57,6 +57,8 @@ const useStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',  
+            color: 'red',
+            backgroundColor: 'green',
         },
         inputRoot: {
             color: 'inherit',
@@ -88,7 +90,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 //JAVASCRIPT
 
-export default function PrimarySearchAppBar() {
+function Navbar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -221,3 +223,5 @@ return (
     </div>
 );
 }
+
+export default Navbar;
