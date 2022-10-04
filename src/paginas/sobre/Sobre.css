@@ -10,3 +10,12 @@
 .bg-sobre{
     padding: 5px 5px;
 }
+
+.bg-login{
+    justify-content: center;
+}
+
+.imgcenter{
+    display: flex;
+    align-items: center;
+}
