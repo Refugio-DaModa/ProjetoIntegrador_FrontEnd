@@ -7,11 +7,11 @@ import { color } from "@mui/system"
 function Login()
 {
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#dcdde1"}}>
+        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
             <Grid alignItems="center" xs={6}>
                 <Box paddingX={20}>
                     <form>
-                    <Box className="sombra">
+                    <Box className="sombra" style={{color:"black"}}>
                         <Typography variant="h4" gutterBottom color="textPrimary" align="center" className="textos1">
                             Login
                         </Typography>
