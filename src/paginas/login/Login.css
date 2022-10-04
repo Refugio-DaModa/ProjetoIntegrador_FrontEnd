@@ -1,6 +1,7 @@
 .textos1
 {
     font-weight: bold;
+    color: black;
 }
 
 .espaco
@@ -34,12 +35,12 @@
     
 }
 
-.ou
+.traco
 {
-    position: relative;
-    margin: 20px 0;
-    padding-top: 1rem;
+    padding: 5px;
+    font-size: 10px !important;
     padding-bottom: 1rem;
+    color: black;
 }
 
 .crie

@@ -7,7 +7,7 @@ import { color } from "@mui/system"
 function Login()
 {
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#dcdde1"}}>
             <Grid alignItems="center" xs={6}>
                 <Box paddingX={20}>
                     <form>
@@ -24,12 +24,16 @@ function Login()
                                 </Button>
                             </Link>
                         </Box>
+                        <Link to="" className="text-decorator-none">
                             <Typography  gutterBottom color="blue" align="center" className="espaco">
                                 Esqueci minha senha
                             </Typography>
-                            <Typography  gutterBottom color="textPrimary" align="center" className="ou">
-                                --------------------   OU   --------------------
-                            </Typography>
+                            </Link>
+                            <Box display="flex" justifyContent='center' marginTop={2}>
+                                    <Typography variant='subtitle1' className="traco" align="center">----------------------------------------</Typography>
+                                    <Typography variant='subtitle1' className="textos1" align="center">   OU   </Typography>
+                                    <Typography variant='subtitle1' className="traco" align="center">----------------------------------------</Typography>
+                            </Box>
                             <Typography variant="h5" gutterBottom color="black" align="center" className="crie">
                                 Crie uma conta
                             </Typography>
