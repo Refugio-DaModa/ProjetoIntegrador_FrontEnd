@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.up('sm')]: {
                 display: 'block',
             },
+            marginLeft: 100,
         },
         //O background é literalmente a caixinha retangular de pesquisa; O texto é o texto e a lupinha
         search: {
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: 'auto',
             },          
         },
-        //
+        //É só a lupa em si. Esse aqui também colore a cor da lupinha. O background é um quadrado.
         searchIcon: {
             padding: theme.spacing(0, 2),
             height: '100%',
@@ -58,9 +59,11 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: 'center',
             justifyContent: 'center',  
         },
+        //O background é literalmente a caixinha retangular de pesquisa, sem a caixinha; O texto é o texto sem a lupinha.
         inputRoot: {
             color: 'inherit',
         },
+        //É a caixinha da lupa, envolvendo o background e o texto. Sinceramente não entendi a diferença para os anteriores.
         inputInput: {
             padding: theme.spacing(1, 1, 1, 0),
             // vertical padding + font size from searchIcon
@@ -71,12 +74,15 @@ const useStyles = makeStyles((theme: Theme) =>
                 width: '20ch',
             },
         },
+        //É o container da barra de pesquisa, incluindo a margem
         sectionDesktop: {
             display: 'none',
             [theme.breakpoints.up('md')]: {
                 display: 'flex',
             },
         },
+        //É pra mobile, são 3 pontinhos que abrem o login (eles são tipo o texto)
+        //E o background é um container quadrado verde
         sectionMobile: {
             display: 'flex',
             [theme.breakpoints.up('md')]: {
@@ -88,7 +94,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 //JAVASCRIPT
 
-export default function PrimarySearchAppBar() {
+function Navbar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -163,61 +169,82 @@ export default function PrimarySearchAppBar() {
 
 return (
     <div className={classes.grow}>
+        {/*Aqui dá pra mudar a cor do background da barra toda, fora todos os textos: */}
         <AppBar position="static">
-        <Toolbar>
-        <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-        >
-        <MenuIcon />
-        </IconButton>
-        <Typography className={classes.title} variant="h6" noWrap>
-            Refúgio da Moda
-        </Typography>
+            {/*Aqui também dá pra mudar a cor do background da barra toda, fora todos os textos: */}
+            <Toolbar>
+                {/*Aqui é o hamburguinho. As linhas mudam em "color" e o background é um redondinho: */}
+                <IconButton
+                    edge="start"
+                    className={classes.menuButton}
+                    color="inherit"
+                    aria-label="open drawer"
+                >
+                    {/*Aqui é o hamburguinho também, mas o background é um quadrado bem rente: */}
+                    <MenuIcon />
+                </IconButton>
 
-    <div className={classes.grow} />
-    <div className={classes.sectionDesktop}>
-        <IconButton
-            edge="end"
-            aria-label="account of current user"
-            aria-controls={menuId}
-            aria-haspopup="true"
-            onClick={handleProfileMenuOpen}
-            color="inherit"
-        >
-            <div className={classes.search}>
-    <div className={classes.searchIcon}>
-        <SearchIcon />
-    </div>
-        <InputBase
-            placeholder="Search…"
-            classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-            }}
-            inputProps={{ 'aria-label': 'search' }}
-        />
-    </div>
-        <AccountCircle />
-        </IconButton>
-    </div>
-    <div className={classes.sectionMobile}>
-        <IconButton
-            aria-label="show more"
-            aria-controls={mobileMenuId}
-            aria-haspopup="true"
-            onClick={handleMobileMenuOpen}
-            color="inherit"
-        >
-        <MoreIcon />
-        </IconButton>
-    </div>
-        </Toolbar>
+                {/*Aqui é o título: */}
+                <Typography className={classes.title} variant="h6" noWrap>
+                    Refúgio da Moda
+                </Typography>
+
+
+
+                <div className={classes.grow} />
+
+                    <div className={classes.sectionDesktop}>
+                        {/*Esse aqui é o container da lupinha, mas o background em formato oval!!*/}
+                        <IconButton
+                            edge="end"
+                            aria-label="account of current user"
+                            aria-controls={menuId}
+                            aria-haspopup="true"
+                            onClick={handleProfileMenuOpen}
+                            color="inherit"
+                        >
+                            {/*Aqui é a caixinha de pesquisa. O background é a caixinha de pesquisa em si: */}
+                            <div className={classes.search}>
+                                    
+                                    {/*Aqui é só a lupinha*/}
+                                    <div className={classes.searchIcon}>
+                                        <SearchIcon />
+                                    </div>
+                                    {/*Aqui é a cainha de pesquisa, mas só ela, sem a lupinha:*/}
+                                    <InputBase
+                                        placeholder="Pesquise aqui..."
+                                        classes={{
+                                            root: classes.inputRoot,
+                                            input: classes.inputInput,
+                                        }}
+                                        inputProps={{ 'aria-label': 'search' }}
+                                    />
+                                </div>
+                                {/*Aqui é o bonequinho do login: */}
+                            <AccountCircle/>
+                            </IconButton>                 
+                        </div>
+                                                    
+                                                    
+                                                    <div className={classes.sectionMobile}>
+                                                        <IconButton
+                                                            aria-label="show more"
+                                                            aria-controls={mobileMenuId}
+                                                            aria-haspopup="true"
+                                                            onClick={handleMobileMenuOpen}
+                                                            color="inherit"
+                                                        >
+                                                        {/*Aqui eu não entendi, mudar a cor dá erro: */}
+                                                        <MoreIcon />
+                                                        </IconButton>
+                                                    </div>
+
+            </Toolbar>
         </AppBar>
-    {renderMobileMenu}
-    {renderMenu}
+        {renderMobileMenu}
+        {renderMenu}
     </div>
 );
 }
+
+export default Navbar;
