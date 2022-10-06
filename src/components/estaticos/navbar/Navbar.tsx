@@ -12,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom';
 
 //"CSS"
 
@@ -119,6 +120,10 @@ function Navbar() {
     setMobileMoreAnchorEl(event.currentTarget);
     };
 
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
         <Menu
@@ -132,6 +137,9 @@ function Navbar() {
         >
         <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
         <MenuItem onClick={handleMenuClose}>Minha conta</MenuItem>
+        <Link to="/login" className="text-decorator-none">
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Link>
         </Menu>
     );
 
