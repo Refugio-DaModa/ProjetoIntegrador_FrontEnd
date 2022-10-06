@@ -3,7 +3,7 @@ import "./CadastroUsuario.css"
 import {Box, Grid, Typography, TextField, Button} from "@mui/material"
 import {Link, useNavigate} from "react-router-dom"
 import { color } from "@mui/system"
-import User from '../../models/User'
+import User from '../../model/User'
 import { cadUsuario } from "../../services/Service"
 
 function CadastroUsuario()
@@ -51,7 +51,7 @@ function CadastroUsuario()
         }
         async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
             e.preventDefault()
-            if(confirmarSenha == user.senha){
+            if(confirmarSenha === user.senha){
             cadUsuario(`/usuarios/cadastrar`, user, setUserResult)
             alert('Usuario cadastrado com sucesso')
             }else{
