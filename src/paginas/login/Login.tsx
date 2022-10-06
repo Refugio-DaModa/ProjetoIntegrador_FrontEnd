@@ -4,7 +4,7 @@ import {Box, Grid, Typography, TextField, Button} from "@mui/material"
 import {Link, useNavigate} from "react-router-dom"
 import { color } from "@mui/system"
 import useLocalStorage from "react-use-localstorage"
-import UsuarioLogin from "../../model/UsuarioLogin"
+import UsuarioLogin from "../../model/UserLogin"
 import { login } from "../../services/Service"
 
 function Login()
