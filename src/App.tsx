@@ -6,7 +6,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
+
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+
 
 
 function App() 
@@ -24,6 +26,7 @@ function App()
           </div>
         <Footer />
       </BrowserRouter>
+
   )
 }
 

@@ -1,11 +1,56 @@
-import React from "react"
+import React, { ChangeEvent, useEffect, useState } from "react"
 import "./Login.css"
 import {Box, Grid, Typography, TextField, Button} from "@mui/material"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { color } from "@mui/system"
+import useLocalStorage from "react-use-localstorage"
+import UsuarioLogin from "../../model/UsuarioLogin"
+import { login } from "../../services/Service"
 
 function Login()
 {
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage("token");
+    
+        const [usuarioLogin, setUsuarioLogin] = useState <UsuarioLogin> ({
+            id: 0,
+            nome: "",
+            usuario: "",
+            senha: "",
+            foto: "",
+            data_nascimento: "",
+            token: ""
+        })
+    
+        function updateModel(e: ChangeEvent<HTMLInputElement>)
+        {
+            setUsuarioLogin ({
+                ...usuarioLogin,
+                [e.target.name]: e.target.value
+            })
+        }
+    
+        async function onSubmit(e:ChangeEvent<HTMLFormElement>)
+        {
+            e.preventDefault();
+            try 
+            {
+                await login(`usuarios/logar`, usuarioLogin, setToken)
+                alert("Usuário logado com sucesso!");
+            } 
+            catch (error)
+            {
+                alert("Login ou senha inválido!");
+            }
+        }
+    
+        useEffect(() => {
+            if (token !== "")
+            {
+            navigate("/home")
+            }
+        }, [token])
+
     return (
         <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
             <Grid alignItems="center" xs={6}>
@@ -37,7 +82,7 @@ function Login()
                             <Typography variant="h5" gutterBottom color="black" align="center" className="crie">
                                 Crie uma conta
                             </Typography>
-                            <Link to="" className="text-decorator-none"> {/* colocar o link do direcionamento */}
+                            <Link to="/cadastro" className="text-decorator-none">
                                 <Button type="submit" variant="contained" color="primary" fullWidth>
                                     Cadastre-se
                                 </Button>
