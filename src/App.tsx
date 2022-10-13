@@ -7,12 +7,19 @@ import Footer from './components/estaticos/footer/Footer';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
+import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
+import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
+import store from './store/store';
 
 
 
 function App() 
 {
   return (
+    <Provider store = {store}>
+    <ToastContainer/>
     <BrowserRouter>
         <Navbar />
           <div style={{ minHeight: '100vh' }}>
@@ -21,10 +28,12 @@ function App()
               <Route path="/login" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<CadastroUsuario />} />
+              <Route path="/formularioCategoria" element={<CadastroCategoria />} />
             </Routes>
           </div>
         <Footer />
       </BrowserRouter>
+      </Provider>
 
   )
 }
