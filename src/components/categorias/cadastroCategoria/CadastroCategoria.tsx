@@ -17,8 +17,10 @@ const token = useSelector<TokenState, TokenState ["tokens"] >(
 const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     tipo: "",
-    denuncia: false
+    denuncia: false,
+    produto: null
 })
+
 
 useEffect(() => {
     if(token === "")
@@ -46,7 +48,10 @@ async function findById (id: string)
 function updateTema (e: ChangeEvent<HTMLInputElement>) 
 {
     setCategoria({
-        ...categoria, [e.target.name]: e.target.value, denuncia: checked
+        ...categoria, 
+        [e.target.name]: e.target.value,
+        denuncia: checked, 
+        produto: null
     })
 }
 
