@@ -1,4 +1,4 @@
-import { Button, Container, TextField, Typography } from "@mui/material"
+import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material"
 import React, { ChangeEvent, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
@@ -95,7 +95,6 @@ function back()
                 <Typography variant="h3" color="textSecondasry" component="h1" align="center">Formulário de cadastro de Categoria</Typography>
                 <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id="tipo" label="Tipo" variant="outlined" 
                 name="tipo" margin="normal" fullWidth />
-               	<Typography >Denúncia</Typography>
                    <label >Denúncia</label>
                    <input 
                         type="checkbox"
