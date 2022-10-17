@@ -206,6 +206,12 @@ return (
                     Cadastrar Categorias
                 </Typography>
                 </Link>
+
+                <Link to="/formularioProduto">
+                <Typography className={classes.title} variant="h6" noWrap>
+                    Cadastrar Produtos
+                </Typography>
+                </Link>                
                 
 
 
