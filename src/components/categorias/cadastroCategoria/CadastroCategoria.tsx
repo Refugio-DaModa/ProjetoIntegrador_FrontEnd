@@ -46,7 +46,7 @@ async function findById (id: string)
 function updateTema (e: ChangeEvent<HTMLInputElement>) 
 {
     setCategoria({
-        ...categoria, [e.target.name]: e.target.value,
+        ...categoria, [e.target.name]: e.target.value, denuncia: checked
     })
 }
 
@@ -77,24 +77,33 @@ function back()
     navigate("/categorias")
 }
 
+    const [checked, setChecked] = useState(false);
+
+    useEffect(() => {
+        
+        setCategoria({
+            ...categoria,
+            denuncia: checked
+        })
+        console.log(checked);
+    },[checked])
+
+
     return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondasry" component="h1" align="center">Formulário de cadastro de Categoria</Typography>
                 <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id="tipo" label="Tipo" variant="outlined" 
                 name="tipo" margin="normal" fullWidth />
-
-                <FormControl fullWidth variant="standard">
-                    <InputLabel id="demo-simple-select-helper-label">Denúncia</InputLabel>
-                    <Select labelId="demo-simple-select-helper-label" id="demo-simple-select-helper" onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                        headers: {"Authorization": token}
-                        })}>
-                    </Select>
-                    <FormHelperText>Escolha um tipo de denúncia</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary"> 
-                        Finalizar
-                    </Button>
-                </FormControl>
+                   <label >Denúncia</label>
+                   <input 
+                        type="checkbox"
+                        checked={checked}
+                        onChange={e => setChecked(e.target.checked)}
+                    />
+                <Button type="submit" variant="contained" color="primary">
+                    Finalizar
+                </Button>
             </form>
         </Container>
     )
