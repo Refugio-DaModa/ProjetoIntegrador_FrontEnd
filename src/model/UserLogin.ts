@@ -6,7 +6,7 @@ interface UserLogin
     senha: string;
     data_nascimento: string;
     foto: string;
-    token: string | null;
+    token: string;
 }
 
 export default UserLogin;

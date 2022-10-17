@@ -6,7 +6,8 @@ import UsuarioLogin from "../../model/UserLogin"
 import { login } from "../../services/Service"
 import { toast } from "react-toastify"
 import { useDispatch } from "react-redux"
-import { addToken } from "../../store/tokens/Actions";
+import { addId, addToken } from "../../store/tokens/Actions";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login()
 {
@@ -23,6 +24,16 @@ function Login()
             data_nascimento: "",
             token: ""
         })
+
+        const [respUserLogin, setRespUserLogin] = useState<UsuarioLogin>({
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            data_nascimento: "",
+            token: '',
+          });
     
         function updateModel(e: ChangeEvent<HTMLInputElement>)
         {
@@ -31,14 +42,39 @@ function Login()
                 [e.target.name]: e.target.value
             })
         }
+
+        async function onSubmit(e:ChangeEvent<HTMLFormElement>) {
+        
+            e.preventDefault(); 
+            try {
+                await login(`usuarios/logar`, usuarioLogin, setRespUserLogin)
+                toast.success("Usuário logado com sucesso!", {
+                    position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
+            } 
+            catch (error) 
+            {
+                toast.error("Login ou senha inválidos!", {
+                    position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
+            }
+        }
     
     
         useEffect(() => {
-            if (token != "") {
+            if (token !== "") {
                 dispatch(addToken(token));
               navigate("/home");
             }
           }, [token]);
+
+          useEffect(()=>{
+            if(respUserLogin.token !== ''){
+              dispatch(addToken(respUserLogin.token))
+              dispatch(addId(respUserLogin.id.toString()))
+              console.log ('Token:'+respUserLogin.token);
+              
+              navigate('/home');
+            }
+          },[respUserLogin.token])
 
         useEffect(() => {
             if(usuarioLogin.usuario !== "" && usuarioLogin.senha.length >= 8) 
@@ -49,21 +85,7 @@ function Login()
 
         const [form, setForm] = useState(false)
 
-        async function onSubmit(e:ChangeEvent<HTMLFormElement>) 
-    {
-        e.preventDefault(); 
-        try  
-        {
-            await login(`usuarios/logar`, usuarioLogin, setToken)
-            toast.success("Usuário logado com sucesso!", {
-                position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
-        } 
-        catch (error) 
-        {
-            toast.error("Login ou senha inválidos!", {
-                position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
-        }
-    }
+        
 
     return (
         <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
