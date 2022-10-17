@@ -1,0 +1,59 @@
+.containerNavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: lightgreen;
+}
+
+.logoNavbar {
+
+}
+.imagemLogoNavbar {
+    width: 10vw;
+    margin: 0.5vw;
+}
+
+.navbarOpcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.opcoesTexto {
+    text-decoration: none;
+    padding: 1.5vw;
+}
+
+.loginPesquisa {
+
+}
+
+
+.pesquisa {
+
+}
+.caixinhaPesquisa {
+    overflow: hidden;
+    background-color: white;
+    padding: 0.5vw;
+    font-size: 1vw;
+    border: none;
+}
+.caixinhaPesquisa input[type=text] {
+    overflow: hidden;
+    background-color: white;
+    padding: 0.5vw;
+    font-size: 1vw;
+    border: none;
+}
+.botaoPesquisa {
+    
+}
+
+.login {
+
+}
