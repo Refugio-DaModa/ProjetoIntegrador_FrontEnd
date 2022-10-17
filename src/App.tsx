@@ -24,6 +24,7 @@ function App()
               <Route path="/login" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<CadastroUsuario />} />
+              <Route path="/formularioCategoria" element={<CadastroCategoria />} />
               <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
               <Route path="/deleteCategoria/:id" element={<DeletarCategoria />} />
               <Route path="/categorias" element={<ListaCategoria/>} />

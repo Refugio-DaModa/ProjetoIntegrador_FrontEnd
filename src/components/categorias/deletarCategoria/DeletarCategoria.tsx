@@ -7,12 +7,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { toast } from 'react-toastify';
 import Categoria from '../../../model/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarCategoria() {
     let navigate = useNavigate();
     const {id} = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
     const [categoria, setCategoria] = useState<Categoria>()
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+  )
   
     useEffect(() => {
         if(token == ""){
@@ -45,7 +49,7 @@ function DeletarCategoria() {
     }
   
     function sim(){
-      navigate('/deletarCategoria')
+      navigate('/categorias')
       deleteId(`/categorias/${id}`,{
         headers:{
           'Authorization': token
@@ -64,7 +68,7 @@ function DeletarCategoria() {
     }
   
     function nao(){
-      navigate('/deletarCategoria')
+      navigate('/categorias')
     }
   
      

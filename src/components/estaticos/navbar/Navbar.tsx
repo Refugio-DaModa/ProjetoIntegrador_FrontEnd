@@ -196,6 +196,17 @@ return (
                 <Typography className={classes.title} variant="h6" noWrap>
                     Refúgio da Moda
                 </Typography>
+                <Link to="/categorias">
+                <Typography className={classes.title} variant="h6" noWrap>
+                    Listar Categorias
+                </Typography>
+                </Link>
+                <Link to="/formularioCategoria">
+                <Typography className={classes.title} variant="h6" noWrap>
+                    Cadastrar Categorias
+                </Typography>
+                </Link>
+                
 
 
 
