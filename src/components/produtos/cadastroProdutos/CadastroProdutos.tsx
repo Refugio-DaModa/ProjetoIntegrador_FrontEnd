@@ -134,7 +134,7 @@ function CadastroProdutos() {
                     'Authorization': token
                 }
             })
-            toast.success('Produto cadastrad com sucesso!', {
+            toast.success('Produto cadastrado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -224,7 +224,7 @@ function CadastroProdutos() {
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategorias, {
+                        onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
                             headers: {
                                 'Authorization': token
                             }

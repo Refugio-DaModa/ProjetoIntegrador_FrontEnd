@@ -10,6 +10,7 @@ import ListaCategoria from "./components/categorias/listaCategoria/ListaCategori
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import store from "./store/store";
+import CadastroProdutos from "./components/produtos/cadastroProdutos/CadastroProdutos";
 
 function App() 
 {
@@ -28,6 +29,10 @@ function App()
               <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
               <Route path="/deleteCategoria/:id" element={<DeletarCategoria />} />
               <Route path="/categorias" element={<ListaCategoria/>} />
+
+              <Route path="/formularioProduto" element={<CadastroProdutos />} />
+              <Route path="/formularioProduto/:id" element={<CadastroProdutos />} />
+
             </Routes>
           </div>
         <Footer />
