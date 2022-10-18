@@ -5,6 +5,7 @@ import {Link, useNavigate} from "react-router-dom"
 import { color } from "@mui/system"
 import User from '../../model/User'
 import { cadUsuario } from "../../services/Service"
+import { toast } from "react-toastify"
 
 function CadastroUsuario()
 {
@@ -52,17 +53,45 @@ function CadastroUsuario()
             e.preventDefault()
             if(confirmarSenha === user.senha){
             cadUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            alert('Usuario cadastrado com sucesso')
+            toast.success("Usuário cadastrado com sucesso!", {
+                position: "top-right", 
+                autoClose: 2000, 
+                hideProgressBar: false, 
+                closeOnClick: true, 
+                pauseOnHover: false, 
+                draggable: false, 
+                theme: "colored", 
+                progress: undefined})
             }else{
-                alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+                toast.error("Dados inconsistentes. Favor verificar as informações de cadastro.", {
+                    position: "top-right", 
+                    autoClose: 2000, 
+                    hideProgressBar: false, 
+                    closeOnClick: true, 
+                    pauseOnHover: false, 
+                    draggable: false, 
+                    theme: "colored", 
+                    progress: undefined})
             }
         }
+        useEffect(() => {
+            if(user.usuario !== "" && user.senha.length >= 8)  
+            {
+                setForm(true)
+            }
+            else 
+            {
+                setForm(false)
+            }
+        }, [user])
+
+        const [form, setForm] = useState(false)
 
     return (
         <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
             <Grid alignItems="center" xs={6}>
-                <Box paddingX={20}>
-                    <form onSubmit={onSubmit}>
+                <Box paddingX={15} className="padding">
+                    <form onSubmit={onSubmit} >
                     <Box className="sombra" style={{color:"black"}}>
                         <Typography variant="h4" gutterBottom color="textPrimary" align="center" className="textos1">
                             Cadastro
@@ -73,13 +102,13 @@ function CadastroUsuario()
                             <TextField required value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Foto (url)' variant='outlined' name='foto' margin='normal' fullWidth />
                             <TextField required value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                             <TextField required value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
-                        <Box marginTop={2} textAlign="center">
-                                <Button type="submit" variant="contained" color="primary" className="botao">
+                        <Box marginTop={2} textAlign="center" display="flex" justifyContent="center">
+                                <Button type="submit" variant="contained" className="botao" disabled={!form}>
                                     Cadastrar
                                 </Button>
-                            <Link to="/login" className="text-decorator-none">
-                                <Button type="submit" variant="contained" color="primary" >
-                                    Já possuo conta.
+                            <Link to="/login" >
+                                <Button type="submit" variant="contained" className="botao" >
+                                    Já possuo conta
                                 </Button>
                             </Link>
                         </Box>
