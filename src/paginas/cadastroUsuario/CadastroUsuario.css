@@ -1,3 +1,31 @@
 .botao {
     margin-right: 20px !important;
 }
+
+.sombra
+{
+    margin: 20px auto 0;
+    background: rgba(247, 246, 246, 0.9);
+    box-shadow: 5px 5px 20px;
+    padding: 2rem 2rem;
+    border-radius: 50px !important;
+}
+
+.botao {
+    background-color: #8806BF !important ;
+    
+}
+
+.botao:disabled {
+    background-color: gray !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.padding {
+    padding-bottom: 2rem;
+    padding-top: 2rem !important;
+}
+
