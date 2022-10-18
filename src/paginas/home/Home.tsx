@@ -1,48 +1,62 @@
-import React, { useEffect } from "react";
 import {Typography, Button, Paper, Grid} from "@material-ui/core";
 import {Box} from "@mui/material";
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 function Home(){
-
-    let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
-
-    useEffect(() => {
-        if(token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
-
     return(
-        <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa">
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Veja nossos produtos!Qualidade aqui meu parceiro</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo" >Qualidade aqui meu parceiro!</Typography>
-                    </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                        </Box>
-                        <Button variant="outlined" className="botao" >Ver Produtos</Button>
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <img src="https://wallpapers.com/images/hd/thrasher-and-streetwear-brands-8y8ny43783hjxn06.jpg" alt="" width="500px" height="500px" />
-                </Grid>
-                <Grid xs={12} className="produtos">
-                </Grid>
-            </Grid>
+        <div>
+            <h1 className="Center">Seja bem-vinde</h1>
+            <h2 className="Center">Qualidade e aqui </h2>
+        <div className="Center">
+            <Swiper className="peido"
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
         
-        </>
+      >
+        <SwiperSlide><img src="https://cdn.discordapp.com/attachments/1001884731979350027/1031986083275219054/8UEp8jFDCDEEccW8wEuPc7.jpg" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/1_iPfyZrZzvEUwmvU06mL4Kg.jpeg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/7f9708a5-d789-4e2e-9a15-692994e1e626-gettyimages-1168008039.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/53253027fef2ab5162a602f2acfed431-1644925911.jpg?raw=true" alt="" className="zoni"/></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/wedding-season.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+      </Swiper>
+      </div>   
+      
+      <div className="Center">
+      <Swiper  className="peido"
+        slidesPerView={3}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+      >
+        <SwiperSlide className="zoni2"><img src="https://3.bp.blogspot.com/-4rPDhyvWZfk/XG6J9UzCg6I/AAAAAAABTOU/E865Oaf5cLQUycphNvqExxFnjy_Gc5hEwCLcBGAs/s1600/marcas-nacionais-streetwear%2B%25286%2529.jpg" alt=""  /></SwiperSlide>
+        <SwiperSlide className="zoni2" ><img src="https://3.bp.blogspot.com/-bs82Mgc11zM/XG6J0NNxfDI/AAAAAAABTOM/SEKxnmKyQNkjfgJS44wLUOste-mfCBtqgCLcBGAs/s1600/marcas-nacionais-streetwear%2B%25281%2529.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide className="zoni2"><img src="https://1.bp.blogspot.com/-Bq-LUyY8Wg4/XG6KWIIjkhI/AAAAAAABTPA/GABGgIg9EgACXT__gGAbdHf2v3TXYvGuQCLcBGAs/s1600/marcas-nacionais-streetwear%2B%252815%2529.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide className="zoni2"><img src="https://2.bp.blogspot.com/-ZKuK_9-eSNQ/XG6KvrQ94_I/AAAAAAABTPw/_U_BVKNS3vAYLO9GGQ1Boasd-J7aHq_8QCLcBGAs/s1600/marcas-nacionais-streetwear%2B%252824%2529.jpg" alt="" /></SwiperSlide>
+      </Swiper>
+      </div>
+
+        </div>
     );
 
 }
