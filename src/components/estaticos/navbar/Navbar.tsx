@@ -83,8 +83,6 @@ function Navbar() {
         <div className="loginPesquisa">
 
             <form 
-            action="search.php" 
-            method="get" 
             className="pesquisa">
                 <input 
                 type="text" 
