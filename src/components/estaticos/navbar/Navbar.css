@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #8806BF;
     width: 100vw;
-    height: 5vw;
+    height: 35vw;
     overflow-x: hidden;
 }
 
@@ -32,14 +32,12 @@
     margin-left: 10vw;
     margin-right: 10vw;
 }
-
-
-
 .opcoesTexto {
     position: relative;
     color: #ffffff;
     text-decoration: none;
     color: white;
+    font-weight: lighter !important;
     margin-left: 1.6vw !important;
     margin-right: 1.6vw !important;
     font-size: 1.4vw !important;
@@ -63,32 +61,55 @@
     transform: scaleX(1);
 }
 
-
-
 .navbarIcones {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    height: 35vw;
 }
-.login {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+}
+.iconePerfil {
     width: 3vw;
     margin: 0.75vw !important;
 }
-.loginImagem {
-    width: 3vw;
-    margin: 0.75vw !important;
-}
-.loginImagem:hover {
+.iconePerfil:hover {
     opacity: 0.5;
-    cursor: pointer;
+    cursor: pointer;    
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 10vw;
+    overflow: visible;
+    background-color: #8806BF;
+    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    overflow: visible;   
+}
+.opcoesDropdown {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.1vw !important;
+    padding: 5px;
+    text-decoration: none;
+    overflow: visible;
+}
+.opcoesDropdown:hover {
+    color: #8806BF;
+    background-color: white;
+    overflow: visible;
+}
+
 .sacola {
     display: flex;
     flex-direction: row;

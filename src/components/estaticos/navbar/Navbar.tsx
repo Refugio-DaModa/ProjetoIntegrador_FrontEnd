@@ -32,7 +32,7 @@ function Navbar() {
 
     let navBarComponent 
 
-    if(token == '') { 
+    if(token !== '') { 
         navBarComponent = <AppBar position="static"> 
 
 
@@ -77,20 +77,47 @@ function Navbar() {
         </div> 
 
         <div className="navbarIcones">
-            <div className="login"> 
+
+            <div className="dropdown">
                 <img 
-                src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Perfil%20branco.png" 
-                alt="" 
-                className="loginImagem"
+                src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Perfil%20branco.png?raw=true" 
+                alt=""
+                className="iconePerfil"
                 />
-            </div> 
-            <div className="sacola"> 
-                <img 
-                src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Sacola%20branca.png" 
-                alt="" 
-                className="sacolaImagem"
-                />
+                <div className="dropdown-content">
+                    <Link to="/categorias">
+                        <Typography className="opcoesDropdown"> 
+                            Categorias
+                        </Typography> 
+                    </Link>
+                    <Link to="/produtos">
+                        <Typography className="opcoesDropdown"> 
+                            Produtos
+                        </Typography> 
+                    </Link>
+                    <Link to="/formularioCategoria">
+                        <Typography className="opcoesDropdown"> 
+                            Editar categorias
+                        </Typography> 
+                    </Link>
+                    <Link to="/formularioProduto">
+                        <Typography className="opcoesDropdown"> 
+                            Editar produtos
+                        </Typography> 
+                    </Link>
+                </div>
             </div>
+            
+            <div className="sacola"> 
+                <Link to="">  
+                    <img 
+                    src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Sacola%20branca.png" 
+                    alt="" 
+                    className="sacolaImagem"
+                    />
+                </Link> 
+            </div>
+
         </div>
 
     </div> 
