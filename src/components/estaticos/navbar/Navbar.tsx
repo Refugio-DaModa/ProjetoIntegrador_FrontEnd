@@ -58,7 +58,7 @@ function Navbar() {
                         Infantil 
                     </Typography> 
                 </Link> 
-                <Link to=""> 
+                <Link to="/equipe"> 
                     <Typography className="opcoesTexto"> 
                         Nossa equipe 
                     </Typography> 

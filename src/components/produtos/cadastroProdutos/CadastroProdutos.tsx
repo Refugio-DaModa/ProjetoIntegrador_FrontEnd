@@ -192,6 +192,7 @@ function CadastroProdutos() {
                     name="preco" 
                     variant="outlined" 
                     margin="normal" 
+                    type="number"
                     fullWidth 
                 />
                 <TextField 
@@ -213,6 +214,7 @@ function CadastroProdutos() {
                     name="quantidade" 
                     variant="outlined" 
                     margin="normal" 
+                    type="number"
                     fullWidth 
                 />
 

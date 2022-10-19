@@ -58,11 +58,11 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .container{
-    margin: 100px;
+    margin: 10px;
     position: relative;
     display: inline;
 }
@@ -264,8 +264,5 @@ body{
     transform: scale(1.2);
 }
 
-.grid-equipe{
-    background-color: rgb(204, 52, 224, 0.2);
-}
 
 
