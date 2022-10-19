@@ -2,13 +2,15 @@ import React, { ChangeEvent, useEffect, useState } from "react"
 import "./CadastroUsuario.css"
 import {Box, Grid, Typography, TextField, Button} from "@mui/material"
 import {Link, useNavigate} from "react-router-dom"
-import { color } from "@mui/system"
 import User from '../../model/User'
 import { cadUsuario } from "../../services/Service"
 import { toast } from "react-toastify"
+import { SyncLoader } from "react-spinners";
 
 function CadastroUsuario()
 {
+    const [loading, setLoading] = useState(false);
+
     let navigate = useNavigate();
         const [confirmarSenha,setConfirmarSenha] = useState<String>("")
         const [user, setUser] = useState<User>(
@@ -51,6 +53,7 @@ function CadastroUsuario()
         }
         async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
             e.preventDefault()
+            setLoading(true)
             if(confirmarSenha === user.senha){
             cadUsuario(`/usuarios/cadastrar`, user, setUserResult)
             toast.success("Usuário cadastrado com sucesso!", {
@@ -62,7 +65,10 @@ function CadastroUsuario()
                 draggable: false, 
                 theme: "colored", 
                 progress: undefined})
-            }else{
+            }
+            else
+            {
+                setLoading(false)
                 toast.error("Dados inconsistentes. Favor verificar as informações de cadastro.", {
                     position: "top-right", 
                     autoClose: 2000, 
@@ -106,6 +112,8 @@ function CadastroUsuario()
                                 <Button type="submit" variant="contained" className="botao" disabled={!form}>
                                     Cadastrar
                                 </Button>
+                                    {loading?(<SyncLoader className="loading-login" size={5} color={'#36D7B7'} loading={loading}/>)
+                                    :(<SyncLoader className="loading-login" size={0} color={'#36D7B7'} loading={true}/>)}
                             <Link to="/login" >
                                 <Button type="submit" variant="contained" className="botao" >
                                     Já possuo conta
