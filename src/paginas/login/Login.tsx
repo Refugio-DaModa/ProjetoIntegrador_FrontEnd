@@ -7,10 +7,13 @@ import { login } from "../../services/Service"
 import { toast } from "react-toastify"
 import { useDispatch } from "react-redux"
 import { addId, addToken } from "../../store/tokens/Actions";
+import { SyncLoader } from "react-spinners";
 import 'react-toastify/dist/ReactToastify.css';
 
 function Login()
 {
+    const [loading, setLoading] = useState(false);
+
     let navigate = useNavigate();
     const dispatch = useDispatch()
     const [token, setToken] = useState ("")
@@ -46,6 +49,7 @@ function Login()
         async function onSubmit(e:ChangeEvent<HTMLFormElement>) {
         
             e.preventDefault(); 
+            setLoading(true)
             try {
                 await login(`usuarios/logar`, usuarioLogin, setRespUserLogin)
                 toast.success("Usuário logado com sucesso!", {
@@ -53,6 +57,7 @@ function Login()
             } 
             catch (error) 
             {
+                setLoading(false)
                 toast.error("Login ou senha inválidos!", {
                     position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
             }
@@ -108,7 +113,9 @@ function Login()
                         <Box marginTop={2} textAlign="center">
                             <Button type="submit" variant="contained" className="btao" fullWidth disabled={!form}>
                                 Entrar
-                            </Button>       
+                            </Button>   
+                                {loading?(<SyncLoader className="loading-login" size={5} color={'#36D7B7'} loading={loading}/>)
+                                :(<SyncLoader className="loading-login" size={0} color={'#36D7B7'} loading={true}/>)}    
                         </Box>
                         <Link to="" className="text-decorator-none">
                             <Typography  gutterBottom color="purple" align="center" className="espaco">
