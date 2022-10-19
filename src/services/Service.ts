@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: "https://refugiodamoda.onrender.com/" 
+    baseURL: "https://refugiodamoda.herokuapp.com/" 
 
 })
 
