@@ -89,7 +89,7 @@ function ListaProduto() {
         
         produto.map(produto => (
           <Box className='box-produtos'>
-            <Card className={classes.root} variant="outlined" >
+            <Card className='cards-produtos' variant="outlined" >
             <CardActionArea>
               <CardMedia
                 className={classes.media}

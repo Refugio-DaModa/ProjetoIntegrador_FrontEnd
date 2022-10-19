@@ -31,3 +31,16 @@
     left: 50%;
     margin-top: 25%;
 }
+
+.cards-produtos{
+    width: 345px;
+    display: inline-block;
+    margin: 20;
+    transition: all 1s;
+    border-radius: 20px !important;
+}
+
+.cards-produtos:hover{
+    box-shadow: 10px 10px 20px;
+    transform: scale(1.05);
+}

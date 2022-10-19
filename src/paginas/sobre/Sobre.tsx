@@ -63,7 +63,7 @@ export function Sobre() {
 
   return (
     <>
-    <Grid container direction="row" justifyContent="center" alignItems="center" className='grid-equipe'>
+    <Grid container direction="row" justifyContent="center" alignItems="center">
     <Box className='box-equipe'>
       <div className="container">
         <div className="card">
