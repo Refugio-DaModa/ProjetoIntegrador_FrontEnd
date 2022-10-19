@@ -1,15 +1,5 @@
 import React from 'react'; 
-import { alpha, makeStyles, Theme, createStyles } from '@material-ui/core/styles'; 
-import IconButton from '@material-ui/core/IconButton'; 
-import { AppBar, Toolbar, Box, Typography, Grid } from '@mui/material'; 
-import InputBase from '@material-ui/core/InputBase'; 
-import Badge from '@material-ui/core/Badge'; 
-import MenuItem from '@material-ui/core/MenuItem'; 
-import Menu from '@material-ui/core/Menu'; 
-import MenuIcon from '@material-ui/icons/Menu'; 
-import SearchIcon from '@material-ui/icons/Search'; 
-import AccountCircle from '@material-ui/icons/AccountCircle'; 
-import MoreIcon from '@material-ui/icons/MoreVert'; 
+import { AppBar, Typography} from '@mui/material'; 
 import { useDispatch, useSelector } from 'react-redux'; 
 import { Link, useNavigate } from 'react-router-dom'; 
 import { addToken } from '../../../store/tokens/Actions'; 
@@ -31,8 +21,7 @@ function Navbar() {
         } 
 
     let navBarComponent 
-
-    if(token !== '') { 
+    
         navBarComponent = <AppBar position="static"> 
 
 
@@ -122,13 +111,12 @@ function Navbar() {
 
     </div> 
     </AppBar> 
-} 
 
     return ( 
     <> 
         {navBarComponent} 
     </> 
-    ); 
+); 
 } 
 
 export default Navbar; 
