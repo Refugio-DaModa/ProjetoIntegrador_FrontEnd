@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #8806BF;
     width: 100vw;
-    height: 35vw;
+    height: 5vw;
     overflow-x: hidden;
 }
 
@@ -55,7 +55,7 @@
     left: 0;
     background-color: #ffffff;
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 .opcoesTexto:hover::before {
     transform: scaleX(1);
@@ -67,7 +67,7 @@
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    height: 35vw;
+    height: 5vw;
 }
 
 .dropdown {
