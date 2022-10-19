@@ -217,7 +217,13 @@ return (
                 <Typography className={classes.title} variant="h6" noWrap>
                     Cadastrar Produtos
                 </Typography>
-                </Link>                
+                </Link>      
+
+                <Link to="/equipe">
+                <Typography className={classes.title} variant="h6" noWrap>
+                    Equipe
+                </Typography>
+                </Link>            
                 
 
 
