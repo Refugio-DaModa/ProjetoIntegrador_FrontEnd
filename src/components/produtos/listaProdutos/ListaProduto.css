@@ -1,3 +1,33 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.foto-produto{
+    width: 200px;
+    height: auto;
+}
+
+.card-produtos{
+    width: 250px;
+    height: 400px;
+}
+
+.grid-equipe{
+    margin: 20px;
+}
+
+.box-produtos{
+    margin: 20px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-produtos{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 25%;
+}

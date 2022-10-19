@@ -1,4 +1,4 @@
-import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material"
+import { Box, Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material"
 import React, { ChangeEvent, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
@@ -105,10 +105,12 @@ function back()
                         type="checkbox"
                         checked={checked}
                         onChange={e => setChecked(e.target.checked)}
-                    />
+                    /> 
+                <Box>
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>
+                </Box>
             </form>
         </Container>
     )

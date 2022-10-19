@@ -74,15 +74,12 @@ function DeletarProdutos() {
      
     return (
       <>
-        <Box m={2}>
+        <Box m={5}>
           <Card variant="outlined" >
             <CardContent>
               <Box justifyContent="center">
                 <Typography color="textSecondary" gutterBottom>
-                  Deseja deletar a Categoria:
-                </Typography>
-                <Typography color="textSecondary" >
-                {produto?.nome}
+                  Deseja deletar o Produto {produto?.nome}?
                 </Typography>
               </Box>
   
@@ -90,12 +87,12 @@ function DeletarProdutos() {
             <CardActions>
               <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                 <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="marginLeft" size='small' color="primary">
                   Sim
                 </Button>
                 </Box>
                 <Box>
-                <Button onClick={nao}  variant="contained" size='large' color="secondary">
+                <Button onClick={nao}  variant="contained" size='small' color="secondary">
                   Não
                 </Button>
                 </Box>
