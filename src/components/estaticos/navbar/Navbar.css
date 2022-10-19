@@ -1,0 +1,133 @@
+.containerNavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #8806BF;
+    width: 100vw;
+    height: 5vw;
+    overflow-x: hidden;
+}
+
+.logoNavbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 8.5vw;
+    margin-top: 0vw;
+}
+.imagemLogoNavbar {
+    width: 8.5vw;
+    margin-top: 0vw;
+}
+
+.navbarOpcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.opcoesTexto {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter !important;
+    margin-left: 1.6vw !important;
+    margin-right: 1.6vw !important;
+    font-size: 1.4vw !important;
+    }
+.opcoesTexto:hover {
+    color: #ffffff;
+}
+.opcoesTexto::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+.opcoesTexto:hover::before {
+    transform: scaleX(1);
+}
+
+.navbarIcones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    height: 5vw;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+}
+.iconePerfil {
+    width: 3vw;
+    margin: 0.75vw !important;
+}
+.iconePerfil:hover {
+    opacity: 0.5;
+    cursor: pointer;    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 10vw;
+    overflow: visible;
+    background-color: #8806BF;
+    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    overflow: visible;   
+}
+.opcoesDropdown {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.1vw !important;
+    padding: 5px;
+    text-decoration: none;
+    overflow: visible;
+}
+.opcoesDropdown:hover {
+    color: #8806BF;
+    background-color: white;
+    overflow: visible;
+}
+
+.sacola {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 4vw;
+    margin: 0.75vw !important;
+}
+.sacolaImagem {
+    width: 4vw;
+    margin: 0.75vw !important;
+}
+.sacolaImagem:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+
+
