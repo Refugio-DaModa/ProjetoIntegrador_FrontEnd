@@ -33,7 +33,7 @@ function Login()
             foto: '',
             data_nascimento: "",
             token: '',
-          });
+        });
     
         function updateModel(e: ChangeEvent<HTMLInputElement>)
         {
@@ -60,74 +60,77 @@ function Login()
     
     
         useEffect(() => {
-            if (token !== "") {
+            if (token !== "") 
+            {
                 dispatch(addToken(token));
-              navigate("/home");
+                navigate("/home");
             }
-          }, [token]);
+        }, [token]);
 
-          useEffect(()=>{
-            if(respUserLogin.token !== ''){
-              dispatch(addToken(respUserLogin.token))
-              dispatch(addId(respUserLogin.id.toString()))
-              console.log ('Token:'+respUserLogin.token);
-              
-              navigate('/home');
+        useEffect(()=>{
+            if(respUserLogin.token !== '')
+            {
+                dispatch(addToken(respUserLogin.token))
+                dispatch(addId(respUserLogin.id.toString()))
+                navigate('/home');
             }
-          },[respUserLogin.token])
+        },[respUserLogin.token])
 
         useEffect(() => {
             if(usuarioLogin.usuario !== "" && usuarioLogin.senha.length >= 8) 
             {
                 setForm(true)
             }
+            else 
+            {
+                setForm(false)
+            }
         }, [usuarioLogin])
 
         const [form, setForm] = useState(false)
 
-        
-
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
-            
+
+        <Grid container direction="row" justifyContent="center" alignItems="center" className="fundo">
+
             <Grid alignItems="center" xs={6}>
-                <Box paddingX={20}>
+                <Box paddingX={20} className="sombra">
                     <form onSubmit={onSubmit}>
-                    <Box className="sombra" style={{color:"black"}}>
-                        <Typography variant="h4" gutterBottom color="textPrimary" align="center" className="textos1">
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className="textos1">
                             Login
                         </Typography>
-                        <TextField value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
-                        <TextField value={usuarioLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
+                        <TextField value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} 
+                        id="usuario" label="Usuário" variant="outlined" name="usuario" margin="normal" fullWidth />
+
+                        <TextField value={usuarioLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updateModel(e)} 
+                        id="senha" label="Senha" variant="outlined" name="senha" margin="normal" type="password" fullWidth />
+
                         <Box marginTop={2} textAlign="center">
-                                <Button type="submit" variant="contained" color="primary" fullWidth>
-                                    Entrar
-                                </Button>       
+                            <Button type="submit" variant="contained" className="btao" fullWidth disabled={!form}>
+                                Entrar
+                            </Button>       
                         </Box>
                         <Link to="" className="text-decorator-none">
-                            <Typography  gutterBottom color="blue" align="center" className="espaco">
+                            <Typography  gutterBottom color="purple" align="center" className="espaco">
                                 Esqueci minha senha
                             </Typography>
                             </Link>
-                            <Box display="flex" justifyContent='center' marginTop={2}>
-                                    <Typography variant='subtitle1' className="traco" align="center">----------------------------------------</Typography>
-                                    <Typography variant='subtitle1' className="textos1" align="center">   OU   </Typography>
-                                    <Typography variant='subtitle1' className="traco" align="center">----------------------------------------</Typography>
+                            <Box display="flex" justifyContent='center' marginTop={2} className="pontilhado">
+                                    <hr className="tracoLeft"></hr>
+                                    <span>ou</span>
+                                    <hr className="tracoRight"></hr>
                             </Box>
                             <Typography variant="h5" gutterBottom color="black" align="center" className="crie">
                                 Crie uma conta
                             </Typography>
                             <Link to="/cadastro" className="text-decorator-none">
-                                <Button type="submit" variant="contained" color="primary" fullWidth>
+                                <Button className="btao" type="submit" variant="contained" color="primary" fullWidth>
                                     Cadastre-se
                                 </Button>
                             </Link>
-                    </Box>
                     </form>
                 </Box>
             </Grid>
-
-            
         </Grid>
     );
 }

@@ -1,22 +1,17 @@
 .textos1
 {
-    font-weight: bold;
     color: black;
+}
+
+.fundo
+{
+    background-color: #F0F4F6;
 }
 
 .espaco
 {
     padding-top: 1rem;
-}
-
-.imagem
-{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    font-size: 13px !important;
 }
 
 .text-decorator-none
@@ -26,25 +21,65 @@
 
 .sombra
 {
-    width: 100%;
-    max-width: 500px;
-    margin: 120px auto 0;
-    background: #fff;
+    margin: 80px auto 0;
+    background: rgba(247, 246, 246, 0.9);
     box-shadow: 5px 5px 20px;
     padding: 2rem 2rem;
-    
-}
-
-.traco
-{
-    padding: 5px;
-    font-size: 10px !important;
-    padding-bottom: 1rem;
-    color: black;
+    border-radius: 50px;
 }
 
 .crie
 {
     padding-bottom: 1rem;
-    font-size: 32px;
+    font-size: 28px;
+}
+
+.pontilhado
+{
+    position: relative;
+    margin: 20px 0;
+}
+
+.tracoLeft
+{
+    display: block;
+    float: left;
+    width: 40%;
+    border-bottom: 1px dashed #ccc;
+    margin-top: 13px;
+}
+
+.tracoRight
+{
+    display: block;
+    float: right;
+    width: 40%;
+    border-bottom: 1px dashed #ccc;
+    margin-top: 13px;
+}
+
+.ou
+{
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+}
+
+.btao
+{
+    background-color: #8806BF !important;
+}
+
+.btao:hover
+{
+    background-color: #8806BF !important;
+}
+
+.btao:disabled
+{
+    background-color: #d9d8d8 !important;
 }
