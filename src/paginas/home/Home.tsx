@@ -9,8 +9,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 function Home(){
     return(
         <div>
-            <h1 className="Center">Seja bem-vinde</h1>
-            <h2 className="Center">Qualidade e aqui </h2>
+            <h1 className="Center">*** Colocar aqui a caixa de pesquisa? ***</h1>
         <div className="Center">
             <Swiper className="fe"
         spaceBetween={30}
@@ -26,15 +25,15 @@ function Home(){
         modules={[Autoplay, Pagination, Navigation]}
         
       >
-        <SwiperSlide><img src="https://cdn.discordapp.com/attachments/1001884731979350027/1031986083275219054/8UEp8jFDCDEEccW8wEuPc7.jpg" alt="" className="zoni" /></SwiperSlide>
-        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/1_iPfyZrZzvEUwmvU06mL4Kg.jpeg?raw=true" alt="" className="zoni" /></SwiperSlide>
-        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/7f9708a5-d789-4e2e-9a15-692994e1e626-gettyimages-1168008039.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
-        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/53253027fef2ab5162a602f2acfed431-1644925911.jpg?raw=true" alt="" className="zoni"/></SwiperSlide>
-        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/wedding-season.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/1-Feminino.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/4-Masculino.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/2-Infantil.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/3-Promocao.jpg?raw=true" alt="" className="zoni"/></SwiperSlide>
+        <SwiperSlide><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/5-Feminino2.jpg?raw=true" alt="" className="zoni" /></SwiperSlide>
       </Swiper>
       </div>
 
-      <div> <h3 className="Center">Seja você</h3> </div>
+      <div> <h3 className="Center">Ideias de looks</h3> </div>
       
       <div className="Center">
       <Swiper  className="fe"
@@ -49,11 +48,24 @@ function Home(){
         navigation={true}
         modules={[Pagination, Navigation]}
       >
-        <SwiperSlide ><img src="https://3.bp.blogspot.com/-4rPDhyvWZfk/XG6J9UzCg6I/AAAAAAABTOU/E865Oaf5cLQUycphNvqExxFnjy_Gc5hEwCLcBGAs/s1600/marcas-nacionais-streetwear%2B%25286%2529.jpg" alt="" className="zoni2" /></SwiperSlide>
-        <SwiperSlide ><img src="https://3.bp.blogspot.com/-bs82Mgc11zM/XG6J0NNxfDI/AAAAAAABTOM/SEKxnmKyQNkjfgJS44wLUOste-mfCBtqgCLcBGAs/s1600/marcas-nacionais-streetwear%2B%25281%2529.jpg" alt=""  className="zoni2" /></SwiperSlide>
-        <SwiperSlide ><img src="https://1.bp.blogspot.com/-Bq-LUyY8Wg4/XG6KWIIjkhI/AAAAAAABTPA/GABGgIg9EgACXT__gGAbdHf2v3TXYvGuQCLcBGAs/s1600/marcas-nacionais-streetwear%2B%252815%2529.jpg" alt="" className="zoni2"/></SwiperSlide>
-        <SwiperSlide ><img src="https://2.bp.blogspot.com/-ZKuK_9-eSNQ/XG6KvrQ94_I/AAAAAAABTPw/_U_BVKNS3vAYLO9GGQ1Boasd-J7aHq_8QCLcBGAs/s1600/marcas-nacionais-streetwear%2B%252824%2529.jpg" alt="" className="zoni2"/></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/4.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/13.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/8.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/14.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/12.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/7.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/1.jpeg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/17.png?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/2.png?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/6.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/16.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+        <SwiperSlide ><img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/11.jpg?raw=true" alt="" className="zoni2" /></SwiperSlide>
+
       </Swiper>
+
       </div>
 
         </div>
