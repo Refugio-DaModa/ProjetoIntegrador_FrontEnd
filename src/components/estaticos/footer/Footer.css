@@ -1,19 +1,13 @@
-.box1{
-    background-color: #ffafc7; 
-    height: 120px;
+.pagamento {
+    width: 5vw;
+    margin: 0.8vw;
+}
+.icones {
+    margin: 0.5vw;
+}
+.icones:hover {
+    opacity: 0.5;
 }
 
-.box2 {
-    background-color: #ffc3d5;
-    height: 60px;
-}
 
-.redes {
-    font-size: 50px !important;
-    color: white;
-}
 
-.textos {
-    color: white;
-    text-decoration: none;
-}

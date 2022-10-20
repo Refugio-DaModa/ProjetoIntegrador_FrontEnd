@@ -25,7 +25,7 @@ function Navbar() {
         navBarComponent = <AppBar position="static"> 
 
 
-    <div className="containerNavbar">   
+    <div className="containerNavbar" style={{backgroundColor: '#8806BF'}}>   
 
         <div className="logoNavbar"> 
             <Link to="/home"> 
