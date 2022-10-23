@@ -74,6 +74,12 @@ function Navbar() {
                 className="iconePerfil"
                 />
                 <div className="dropdown-content">
+
+                    <Link to="/login">
+                        <Typography className="opcoesDropdown"> 
+                            Login
+                        </Typography> 
+                    </Link>
                     <Link to="/categorias">
                         <Typography className="opcoesDropdown"> 
                             Categorias
@@ -94,19 +100,24 @@ function Navbar() {
                             Editar produtos
                         </Typography> 
                     </Link>
+                    <Link to="/">
+                        <Typography className="opcoesDropdown"> 
+                            Logout
+                        </Typography> 
+                    </Link>
                 </div>
             </div>
-            
-            <div className="sacola"> 
-                <Link to="">  
-                    <img 
-                    src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Sacola%20branca.png" 
-                    alt="" 
-                    className="sacolaImagem"
-                    />
-                </Link> 
-            </div>
 
+        </div>
+
+        <div className="sacola"> 
+            <Link to="">  
+                <img 
+                src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Sacola%20branca.png" 
+                alt="" 
+                className="sacolaImagem"
+                />
+            </Link> 
         </div>
 
     </div> 
