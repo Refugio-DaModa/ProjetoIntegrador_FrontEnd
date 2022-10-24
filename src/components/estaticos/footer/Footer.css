@@ -1,12 +1,111 @@
+.roxoEscuro {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+
+    width: 100vw;
+    height: 13.5vw;
+    overflow: hidden;
+    background-color: #15001E;
+}
+.classLogo{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    background-color: #15001E; 
+    margin: 3vw;
+}
+.logoFooter {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    width: 11vw;
+    margin: 3vw;
+}
+.sobreNos {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #15001E; 
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: "1.2vw";
+    line-height: 0.2;
+    font-weight: 400;  
+    margin: 3vw;   
+}
+.classPagamento {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #15001E; 
+    color: #ffffff; 
+    font-weight: 400; 
+    font-size: 1.2vw;
+    margin: 3.5vw;
+}
+.cardsPagamentos {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
 .pagamento {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
     width: 5vw;
     margin: 0.8vw;
 }
+
+.classIcones {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #15001E;
+    color: #ffffff;
+    font-weight: 400; 
+    font-size: 1.2vw;
+    margin: 3vw;
+}
+.icons {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
 .icones {
-    margin: 0.5vw;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    margin: 0.2vw;
 }
 .icones:hover {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
     opacity: 0.5;
+}
+
+.copyright {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    width: 100vw;
+    height: 2.5vw; 
+    overflow: hidden;     
+    font-weight: 500; 
+    font-size: 1.1vw;  
 }
 
 

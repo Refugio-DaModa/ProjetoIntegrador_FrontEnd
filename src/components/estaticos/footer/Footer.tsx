@@ -12,60 +12,41 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <>
-            <Grid 
-            container 
-            display='flex' 
-            alignItems='center'
-            justifyContent='space-evenly'
-            width={"100vw"}
-            height={"15vw"}
-            overflow='hidden'
-            style={{backgroundColor: '#15001E'}}
-            >
-                <Grid 
-                item xs={4} 
-                display='flex' 
-                flexDirection='column' 
-                alignItems='center' 
-                style={{backgroundColor: '#15001E', color: "#ffffff", fontWeight: 400, textDecoration: 'none', fontSize: "1.2vw", lineHeight: "0.2" }}>
+            <div className="roxoEscuro">
+                <div className="classLogo">
+                    <Link to="/home">
+                        <img 
+                        className="logoFooter" 
+                        src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Logo%20Ref%C3%BAgio.png?raw=true" 
+                        alt="" 
+                        />
+                    </Link>
+                </div>
+                
+                <div className="sobreNos">
                     <h3>Informações</h3>
                     <Link to="/equipe" style={{textDecoration: 'none', color: '#ffffff'}}>
                         <p>Sobre nós</p>
                     </Link>
                     <p>Contato</p>
                     <p>Política de privacidade</p>
-                </Grid>
+                </div>
 
-                <Grid 
-                item xs={4} 
-                display='flex' 
-                flexDirection='column' 
-                alignItems='center' 
-                style={{backgroundColor: '#15001E', color: "#ffffff", fontWeight: 400, fontSize: "1.2vw"}}
-                >
+                <div className="classPagamento">
                     <h3>
                         Formas de pagamento
                     </h3>
-                    <Grid 
-                    display='flex'
-                    flexDirection='row'
-                    alignItems='center'
-                    >
+                    <div className="cardsPagamentos">
                         <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Visa.jpg?raw=true" className="pagamento"/>
                         <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Mastercard.jpg?raw=true" className="pagamento"/>
                         <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Boleto.png?raw=true" className="pagamento"/>
                         <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/Paypal.jpg?raw=true" className="pagamento"/>
-                    </Grid>
-                </Grid>
+                    </div>
+                </div>
 
-                <Grid 
-                item xs={4} 
-                display='flex' 
-                flexDirection='column' 
-                alignItems='center' 
-                style={{backgroundColor: '#15001E', color: "#ffffff", fontWeight: 400, fontSize: "1.2vw"}}>
+                <div className="classIcones">
                     <h3>Redes sociais</h3>
-                    <Grid className='icons'>
+                    <div className='icons'>
                         <a 
                             href="https://www.facebook.com/" 
                             target="_blank" 
@@ -94,22 +75,14 @@ function Footer() {
                             <GitHubIcon 
                             style={{ fontSize: '4vw', color: "white" }} className="icones"/>
                         </a>
-                    </Grid>
+                    </div>
+                </div>  
 
-                </Grid>   
-            </Grid>
-
-            <Grid container 
-            display='flex' 
-            justifyContent='center' 
-            alignItems='center'
-            width={"100vw"}
-            height={"2.5vw"}    
-            overflow='hidden'     
-            style={{fontWeight: 500, fontSize: "1.1vw"}}          
-            >
-                Refúgio da Moda | © 2022 Copyright: Todos os direitos reservados.
-            </Grid>
+            </div>
+            
+            <div className="copyright">
+                <p>Refúgio da Moda | © 2022 Copyright: Todos os direitos reservados.</p>
+            </div>
 
         </>
     )
