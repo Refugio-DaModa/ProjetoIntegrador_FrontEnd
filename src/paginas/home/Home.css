@@ -1,25 +1,31 @@
-.Center{
+.Carrossel{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;  
 }
-.fe{
+.Swiper{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 76vw;
-    height: 40.5vw;
-    margin: 2vw;
+    width: 80vw;
+    margin: 1vw;
 }
-
-.zoni{
+.slideCima{
     display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.escolha {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vw;
+  font-size: 2vw;
 }
 .zoni2{
     display: block;

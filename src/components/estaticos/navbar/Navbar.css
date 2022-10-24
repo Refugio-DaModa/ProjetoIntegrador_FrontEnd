@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #8806BF;
     width: 100vw;
-    height: 5vw;
+    
     overflow-x: hidden;
 }
 
@@ -67,12 +67,12 @@
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    height: 5vw;
+    /* height: 5vw; */
 }
 
 .dropdown {
     display: inline-block;
-    position: relative;
+    /* position: relative; */
     overflow: visible;
 }
 .iconePerfil {
@@ -89,11 +89,14 @@
     width: 10vw;
     overflow: visible;
     background-color: #8806BF;
+    margin-left: -2.5rem;
     
 }
 .dropdown:hover .dropdown-content {
     display: block;
     overflow: visible;   
+    z-index: 5;
+
 }
 .opcoesDropdown {
     display: block;
@@ -103,7 +106,9 @@
     padding: 5px;
     text-decoration: none;
     overflow: visible;
+    z-index: 5;
 }
+
 .opcoesDropdown:hover {
     color: #8806BF;
     background-color: white;
@@ -127,7 +132,3 @@
     opacity: 0.5;
     cursor: pointer;
 }
-
-
-
-
