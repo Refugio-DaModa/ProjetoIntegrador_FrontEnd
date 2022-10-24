@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { addToken } from '../../../store/tokens/Actions'; 
 import { TokenState } from '../../../store/tokens/tokensReducer'; 
 import './Navbar.css'; 
+import { toast } from 'react-toastify';
 
 function Navbar() { 
 
@@ -16,7 +17,8 @@ function Navbar() {
 
     function goLogout() { 
         dispatch(addToken('')) 
-        alert("Usuário deslogado") 
+        toast.info("Volte sempre 😉", {
+            position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: false, draggable: false, theme: "colored", progress: undefined})
         history("/login") 
         } 
 
@@ -100,11 +102,9 @@ function Navbar() {
                             Editar produtos
                         </Typography> 
                     </Link>
-                    <Link to="/">
-                        <Typography className="opcoesDropdown"> 
+                        <Typography onClick={goLogout} className="opcoesDropdown"> 
                             Logout
                         </Typography> 
-                    </Link>
                 </div>
             </div>
 
