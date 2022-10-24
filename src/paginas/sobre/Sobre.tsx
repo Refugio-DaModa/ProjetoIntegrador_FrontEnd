@@ -104,7 +104,7 @@ export function Sobre() {
       <div className="container">
         <div className="card">
           <div className="imgBx">
-            <img src="http://s.glbimg.com/es/sde/f/2016/04/28/8d0f1d77fad8f00513e096df10da46e2_300x300.png" />
+            <img src="https://i.imgur.com/b43BCp0.png" />
           </div>
           <div className="contentBx">
             <h2>Bruno Nogueira</h2>
