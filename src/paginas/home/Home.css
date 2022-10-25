@@ -1,11 +1,11 @@
-.Carrossel{
+.carrosselCima{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;  
 }
-.Swiper{
+.swiper{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,17 +19,82 @@
   height: 100%;
   object-fit: cover;
 }
-.escolha {
+.amamos {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 2vw;
-  font-size: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 1vw;;
+  font-size: 2.5vw;
 }
-.zoni2{
-    display: block;
-    width: 100%;
-    height: 100%;
+
+.carrosselBaixo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;  
+  margin-bottom: 1vw;
+}
+.carrosselLook{
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.blackHover {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  opacity:0;
+  transition: all 0.5s ease;
+}
+.e5:hover .blackHover{
+  opacity:0.6;
+  position: absolute;
+}
+.descLook {
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin: 0;
+  color: #ffffff;
+}
+p {
+  line-height: 25px;
+  margin: 0;
+  color: #ffffff;
+}
+.text5 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 55%;
+  opacity:0;
+  transition: all 0.5s ease;
+}
+.e5:hover .text5{
+  opacity:1;
+  position: absolute;
+  top: 42%;
+}
+.botaoLook{
+  justify-content: center;
+  align-items: center;
+}
+.fundoBotao{
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 2vw;
+  border-radius: 0.7vw;
+  color: #000000;
+  font-size: 1.2vw;
+  font-weight: 700;
+  width: 12vw;
+  height: 2vw;
 }
