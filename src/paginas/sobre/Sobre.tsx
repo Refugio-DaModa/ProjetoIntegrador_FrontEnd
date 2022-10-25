@@ -105,7 +105,7 @@ export function Sobre() {
             <div className="size">
               <h3>Quality Assurance</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://www.linkedin.com/in/bruno-nogueira-2330131aa/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
             <a href="https://github.com/brunodev1" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
@@ -123,7 +123,7 @@ export function Sobre() {
             <div className="size">
               <h3>Desenvolvedora Back-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://www.linkedin.com/in/gabrielalopesp/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
             <a href="https://github.com/gabizzzs" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
@@ -159,7 +159,7 @@ export function Sobre() {
             <div className="size">
               <h3>Desenvolvedor Back-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://www.linkedin.com/in/renan-lira/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
             <a href="https://github.com/renanlira96" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
