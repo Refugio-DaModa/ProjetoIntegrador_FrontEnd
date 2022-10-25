@@ -25,6 +25,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -37,6 +38,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
       },
     },
     search: {
+      display: 'center',
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
       backgroundColor: alpha(theme.palette.common.black, 0.15),
@@ -46,7 +48,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
+        marginLeft: theme.spacing(5),
         width: 'auto',
       },
     },
@@ -70,9 +72,9 @@ const useStyles2 = makeStyles((theme: Theme) =>
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        width: '15ch',
+        width: '30ch',
         '&:focus': {
-          width: '16ch',
+          width: '31ch',
         },
       },
     },
@@ -155,7 +157,7 @@ function ListaProduto(props: any) {
 
             <div className={classes2.root}>
               <AppBar position="static">
-                <Toolbar>
+                <Toolbar className='pesquisa-produtos'>
                   <div className={classes2.search}>
                     <div className={classes2.searchIcon}>
                       <SearchIcon />

@@ -46,3 +46,8 @@
     transform: scale(1.05);
     transition: all 1s !important;
 }
+
+.pesquisa-produtos{
+    align-items: center !important;
+    justify-content: center !important;
+}
