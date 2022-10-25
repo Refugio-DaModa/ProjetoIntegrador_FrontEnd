@@ -38,7 +38,6 @@
 }
 
 .cards-produtos:hover{
-    
     transform: scale(1.05);
     transition: all 1s !important;
 }
@@ -46,6 +45,7 @@
 .pesquisa-produtos{
     align-items: center !important;
     justify-content: center !important;
+    background-color: white !important;
 }
 
 .css-1x7skt0{
@@ -55,4 +55,17 @@
 
 .jss52{
     color: black;
+}
+
+.color-appbar{
+    background-color: white !important;
+}
+
+.color-searchicon{
+    color: black !important;
+}
+
+.barra-com-pesquisa{
+    flex-grow: 1;
+    color:#FFFFFF;
 }
