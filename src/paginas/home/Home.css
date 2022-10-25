@@ -1,11 +1,11 @@
-.Carrossel{
+.carrossel{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;  
 }
-.Swiper{
+.swiper{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,9 +27,62 @@
   margin-top: 2vw;
   font-size: 2vw;
 }
-.zoni2{
-    display: block;
-    width: 100%;
-    height: 100%;
+.carrosselLook{
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.blackHover {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  opacity:0;
+  transition: all 0.5s ease;
+}
+.e5:hover .blackHover{
+  opacity:0.6;
+  position: absolute;
+}
+.descLook {
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin: 0;
+  color: #ffffff;
+}
+p {
+  line-height: 25px;
+  margin: 0;
+  color: #ffffff;
+}
+.text5 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 55%;
+  opacity:0;
+  transition: all 0.5s ease;
+}
+.e5:hover .text5{
+  opacity:1;
+  position: absolute;
+  top: 42%;
+}
+.botaoLook{
+  justify-content: center;
+  align-items: center;
+}
+.fundoBotao{
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  margin: 2vw;
+  padding: 1vw;
+  border-radius: 1.5vw;
+  color: #ffffff;
+  font-size: 1.2vw;
 }

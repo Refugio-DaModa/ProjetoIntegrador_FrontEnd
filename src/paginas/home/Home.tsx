@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 function Home(){
   return(
@@ -38,11 +40,11 @@ function Home(){
       </div>
 
       <h3 className="escolha">
-        Escolha o seu próximo look:
+        Looks que amamos:
       </h3>
       
-      <div className="Carrossel">
-        <Swiper  className="Swiper"
+      <div className="carrossel">
+        <Swiper  className="swiper"
           slidesPerView={4}
           spaceBetween={30}
           slidesPerGroup={3}
@@ -54,6 +56,24 @@ function Home(){
           navigation={true}
           modules={[Pagination, Navigation]}
         >
+
+          <SwiperSlide >
+          <div className="item e5">
+            <img className="carrosselLook" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/4.jpg?raw=true" alt="" />
+              <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
+              <div className="text5">
+                <h2 className="descLook">Blá blá blá blá blá</h2>
+                <Link to="/produtos">
+                  <Button className="botaoLook" type="submit">
+                    <div className="fundoBotao">
+                      COMPRAR LOOK
+                    </div>
+                  </Button>
+                </Link>
+              </div>
+          </div>
+          </SwiperSlide>
+
           <SwiperSlide >
             <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/4.jpg?raw=true" alt="" className="zoni2" />
           </SwiperSlide>
