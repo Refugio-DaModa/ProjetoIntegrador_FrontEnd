@@ -114,8 +114,9 @@ export function ListaMasculino(props: any) {
   let handleFilter = (event: any) => {
     let lowerCase = event.target.value.toLowerCase();
     props.setInputText(lowerCase);
-    console.log(lowerCase);
-    
+    console.log("search bar:" +lowerCase);
+    let filter = lowerCase
+    console.log("filter: "+filter);
   }
 
 
@@ -166,8 +167,10 @@ export function ListaMasculino(props: any) {
 
       {
 
-        
-        produto.map(produto => (
+        produto.filter((produto) => {
+          return produto.nome.toLowerCase().includes(filter);
+        })
+        .map((produto => (
 
 
           <Box className='box-produtos'>
@@ -212,7 +215,7 @@ export function ListaMasculino(props: any) {
           
         
           
-        ))
+        )))
       }
 
       </Grid>

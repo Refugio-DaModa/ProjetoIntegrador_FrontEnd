@@ -37,8 +37,8 @@ function App() {
               <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
               <Route path="/deleteCategoria/:id" element={<DeletarCategoria />} />
               <Route path="/categorias" element={<ListaCategoria/>} />
-              <Route path="/produtos" element={<ListaProduto />} />
-              <Route path="/produtos/masculino" element={<ListaMasculino inputText={inputText} /> } />
+              <Route path="/produtos" element={<ListaProduto setInputText={setInputText} inputText={inputText} />} />
+              <Route path="/produtos/masculino" element={<ListaMasculino setInputText={setInputText} /> } />
               <Route path="/produtos/feminino" element={<ListaFeminino /> } />
               <Route path="/produtos/infantil" element={<ListaInfantil /> } />
               <Route path="/deleteProduto/:id" element={<DeletarProdutos />} />
