@@ -17,7 +17,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { MoonLoader } from 'react-spinners';
+import { BounceLoader } from 'react-spinners';
 import SearchIcon from '@material-ui/icons/Search';
 
 
@@ -175,7 +175,14 @@ function ListaProduto(props: any) {
               </AppBar>
             </div>
 
-    {loading ? <MoonLoader className='loading-produtos' /> 
+          {loading ? 
+                  <BounceLoader
+                    className="loading-produtos"
+                    color="#8806BF"
+                    loading
+                    size={80}
+                    speedMultiplier={1}
+                  /> 
     
     : (
 

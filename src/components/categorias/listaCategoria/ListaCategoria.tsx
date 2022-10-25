@@ -9,8 +9,10 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
+import { BounceLoader } from 'react-spinners';
 
 function ListaCategoria() {
+  const [loading, setLoading] = useState(true)
   const [categorias, setCategoria] = useState<Categoria[]>([])
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -40,6 +42,7 @@ function ListaCategoria() {
         'Authorization': token
       }
     })
+    setLoading(false)
   }
 
   useEffect(()=>{
@@ -48,7 +51,20 @@ function ListaCategoria() {
 
   return (
     <>
-    { 
+
+{loading ? 
+
+<BounceLoader
+  className="loading-produtos"
+  color="#8806BF"
+  loading
+  size={80}
+  speedMultiplier={1}
+/> 
+
+: 
+
+     
     categorias.map(categoria =>(
       <Box m={2} >
         <Card variant="outlined">
