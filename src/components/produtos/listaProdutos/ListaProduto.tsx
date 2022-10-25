@@ -25,6 +25,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      color:'#FFFFFF'
       
     },
     menuButton: {
@@ -60,10 +61,11 @@ const useStyles2 = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      color:'secondary'
     },
     inputRoot: {
       
-      color: 'primary',
+      color: '#000000',
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 0),
