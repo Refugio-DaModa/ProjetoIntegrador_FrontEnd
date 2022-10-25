@@ -16,7 +16,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { MoonLoader } from 'react-spinners';
+import { BounceLoader } from 'react-spinners';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -151,7 +151,15 @@ export function ListaFeminino(props:any) {
       </AppBar>
     </div>
 
-    {loading ? <MoonLoader className='loading-produtos' /> 
+    {loading ? 
+
+          <BounceLoader
+            className="loading-produtos"
+            color="#8806BF"
+            loading
+            size={80}
+            speedMultiplier={1}
+          /> 
     
     : 
 
