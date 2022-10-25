@@ -53,13 +53,7 @@ export function Sobre() {
   const [expanded, setExpanded] = React.useState(false);
   const [expandedAlex, setExpandedAlex] = React.useState(false);
 
-  const handleExpandClickAlex = () => {
-    setExpandedAlex(!expandedAlex);
-  };
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
     <>
@@ -93,8 +87,8 @@ export function Sobre() {
             <div className="size">
               <h3>Desenvolvedora Front-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
+            <a href="https://www.linkedin.com/in/mangiaco/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/ManGiaco" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
       </div>
@@ -111,8 +105,8 @@ export function Sobre() {
             <div className="size">
               <h3>Quality Assurance</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
+            <a href="https://www.linkedin.com/in/bruno-nogueira-2330131aa/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/brunodev1" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
       </div>
@@ -127,10 +121,28 @@ export function Sobre() {
           <div className="contentBx">
             <h2>Gabriela Lopes</h2>
             <div className="size">
-              <h3>Desenvolvedora Front-End</h3>
+              <h3>Desenvolvedora Back-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
+            <a href="https://www.linkedin.com/in/gabrielalopesp/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/gabizzzs" target="_blank"> <GitHub className='github-equipe' /> </a>
+          </div>
+        </div>
+      </div>
+      </Box>
+
+      <Box className='box-equipe'>
+      <div className="container">
+        <div className="card">
+          <div className="imgBx">
+            <img src="https://i.imgur.com/D5Lq4c1.png" />
+          </div>
+          <div className="contentBx">
+            <h2>Lucas Mendes</h2>
+            <div className="size">
+              <h3>Desenvolvedor Front-End</h3>
+            </div>
+            <a href="https://www.linkedin.com/in/lucas-mendes-32135a23a/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/Lucas-Mendes-dos-S-Mota" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
       </div>
@@ -147,8 +159,8 @@ export function Sobre() {
             <div className="size">
               <h3>Desenvolvedor Back-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
+            <a href="https://www.linkedin.com/in/renan-lira/" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/renanlira96" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
       </div>
@@ -163,34 +175,15 @@ export function Sobre() {
           <div className="contentBx">
             <h2>Thais Oliveira</h2>
             <div className="size">
-              <h3>Desenvolvedora Front-End</h3>
+              <h3>Desenvolvedora Back-End</h3>
             </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
+            <a href="https://www.linkedin.com/in/tha-oliveira" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
+            <a href="https://github.com/Tha-Oliveira" target="_blank"> <GitHub className='github-equipe' /> </a>
           </div>
         </div>
       </div>
       </Box>
 
-      <Box className='box-equipe'>
-      <div className="container">
-        <div className="card">
-          <div className="imgBx">
-            <img src="https://i.imgur.com/D5Lq4c1.png" />
-          </div>
-          <div className="contentBx">
-            <h2>Lucas Mendes</h2>
-            <div className="size">
-              <h3>Desenvolvedora Front-End</h3>
-            </div>
-            <a href="https://www.linkedin.com/in/alexkatanosaka" target="_blank"> <LinkedIn className = 'linkedin-equipe'/> </a>
-            <a href="https://github.com/alexkfreitas" target="_blank"> <GitHub className='github-equipe' /> </a>
-          </div>
-        </div>
-      </div>
-      </Box>
-
-      
 
     </Grid>
       
