@@ -33,6 +33,9 @@ function Home(){
             <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/Bazar.png?raw=true" alt="" className="slideCima" />
           </SwiperSlide>
           <SwiperSlide>
+            <img src="https://raw.githubusercontent.com/ManGiaco/BancoDeImagens/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/esportivas.png" alt="" className="slideCima" />
+          </SwiperSlide>
+          <SwiperSlide>
             <img src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20cima/Infantil.png?raw=true" alt="" className="slideCima" />
           </SwiperSlide>
         </Swiper>
