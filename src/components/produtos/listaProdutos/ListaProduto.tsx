@@ -61,7 +61,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color:'secondary'
+      color:'black'
     },
     inputRoot: {
       
@@ -157,12 +157,12 @@ function ListaProduto(props: any) {
   return (
     <>
 
-            <div className={classes2.root}>
-              <AppBar position="static">
+            <div className={'barra-com-pesquisa'}>
+              <AppBar position="static" className='color-appbar'>
                 <Toolbar className='pesquisa-produtos'>
                   <div className={classes2.search}>
                     <div className={classes2.searchIcon}>
-                      <SearchIcon />
+                      <SearchIcon className='color-searchicon' />
                     </div>
                     <InputBase
                       placeholder="Buscar por título" onChange={handleFilter}
