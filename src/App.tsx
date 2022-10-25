@@ -14,9 +14,14 @@ import CadastroProdutos from "./components/produtos/cadastroProdutos/CadastroPro
 import ListaProduto from "./components/produtos/listaProdutos/ListaProduto";
 import DeletarProdutos from "./components/produtos/deletarProdutos/DeletarProdutos";
 import { Sobre } from "./paginas/sobre/Sobre";
+import { ListaMasculino } from "./components/produtos/listaMasculino/ListaMasculino";
+import { ListaFeminino } from "./components/produtos/listaFeminino/ListaFeminino";
+import { ListaInfantil } from "./components/produtos/listaInfantil/ListaInfantil";
+import { useState } from "react";
 
-function App() 
-{
+function App() {
+  const [inputText, setInputText] = useState("");
+  
   return (
     <Provider store = {store}>
     <ToastContainer/>
@@ -32,7 +37,10 @@ function App()
               <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
               <Route path="/deleteCategoria/:id" element={<DeletarCategoria />} />
               <Route path="/categorias" element={<ListaCategoria/>} />
-              <Route path="/produtos" element={<ListaProduto />} />
+              <Route path="/produtos" element={<ListaProduto setInputText={setInputText} inputText={inputText} />} />
+              <Route path="/produtos/masculino" element={<ListaMasculino setInputText={setInputText} /> } />
+              <Route path="/produtos/feminino" element={<ListaFeminino /> } />
+              <Route path="/produtos/infantil" element={<ListaInfantil /> } />
               <Route path="/deleteProduto/:id" element={<DeletarProdutos />} />
               <Route path="/formularioProduto" element={<CadastroProdutos />} />
               <Route path="/formularioProduto/:id" element={<CadastroProdutos />} />

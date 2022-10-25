@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Produto from '../../../model/Produto';
 import { busca } from '../../../services/Service'
-import { Box, Grid } from '@mui/material';
+import { AppBar, Box, Grid, InputBase, Toolbar } from '@mui/material';
 import './ListaProduto.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
-import { makeStyles } from '@material-ui/core/styles';
+import { createStyles, alpha, makeStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -18,6 +18,66 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { MoonLoader } from 'react-spinners';
+import SearchIcon from '@material-ui/icons/Search';
+
+
+const useStyles2 = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+      display: 'none',
+      [theme.breakpoints.up('sm')]: {
+        display: 'block',
+      },
+    },
+    search: {
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: alpha(theme.palette.common.black, 0.15),
+      '&:hover': {
+        backgroundColor: alpha(theme.palette.common.black, 0.25),
+      },
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      
+      color: 'primary',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '15ch',
+        '&:focus': {
+          width: '16ch',
+        },
+      },
+    },
+  }),
+);
 
 
 const useStyles = makeStyles({
@@ -32,10 +92,11 @@ const useStyles = makeStyles({
   
 });
 
-function ListaProduto() {
+function ListaProduto(props: any) {
 
   const [loading, setLoading] = useState(true)
   const classes = useStyles();
+  const classes2 = useStyles2();
   const [produto, setProdutos] = useState<Produto[]>([])
   let navigate = useNavigate();
 
@@ -76,18 +137,53 @@ function ListaProduto() {
 
   }, [produto.length])
 
+  let filter = props.inputText;
+  
+
+  let handleFilter = (event: any) => {
+    let lowerCase = event.target.value.toLowerCase();
+    props.setInputText(lowerCase);
+    console.log("lowercase:" +lowerCase);
+    let filter = lowerCase
+    console.log("filter: "+filter);
+    
+    
+  }
+
   return (
     <>
 
+            <div className={classes2.root}>
+              <AppBar position="static">
+                <Toolbar>
+                  <div className={classes2.search}>
+                    <div className={classes2.searchIcon}>
+                      <SearchIcon />
+                    </div>
+                    <InputBase
+                      placeholder="Buscar por título" onChange={handleFilter}
+                      classes={{
+                        root: classes2.inputRoot,
+                        input: classes2.inputInput,
+                      }}
+                      inputProps={{ 'aria-label': 'search' }}
+                    />
+                  </div>
+                </Toolbar>
+              </AppBar>
+            </div>
+
     {loading ? <MoonLoader className='loading-produtos' /> 
     
-    : 
+    : (
 
     <Grid container direction="row" justifyContent="center" alignItems="center" className='grid-equipe'>
 
-      {
-        
-        produto.map(produto => (
+      { 
+
+      produto.filter((produto)=>{
+        return produto.nome.toLowerCase().includes(filter);
+      }).map(produto => (
           <Box className='box-produtos'>
             <Card className='cards-produtos' variant="outlined" >
             <CardActionArea>
@@ -99,6 +195,9 @@ function ListaProduto() {
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   {produto.nome}
+                </Typography>
+                <Typography variant="h6" color="textPrimary" component="h4">
+                  Categoria: {produto.categoria?.tipo}
                 </Typography>
                 <Typography variant="h6" color="textPrimary" component="h4">
                   R$ {produto.preco}
@@ -178,7 +277,7 @@ function ListaProduto() {
       }
 
       </Grid>
-    
+      )
     }
     
     
