@@ -45,17 +45,17 @@ function Navbar() {
                         Home 
                     </Typography> 
                 </Link> 
-                <Link to=""> 
+                <Link to="/produtos/feminino"> 
                     <Typography className="opcoesTexto"> 
                         Feminino 
                     </Typography> 
                 </Link> 
-                <Link to=""> 
+                <Link to="/produtos/masculino"> 
                     <Typography className="opcoesTexto"> 
                         Masculino 
                     </Typography> 
                 </Link> 
-                <Link to=""> 
+                <Link to="/produtos/infantil"> 
                     <Typography className="opcoesTexto"> 
                         Infantil 
                     </Typography> 

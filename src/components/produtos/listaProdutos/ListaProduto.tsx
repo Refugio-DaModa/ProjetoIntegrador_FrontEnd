@@ -101,6 +101,9 @@ function ListaProduto() {
                   {produto.nome}
                 </Typography>
                 <Typography variant="h6" color="textPrimary" component="h4">
+                  Categoria: {produto.categoria?.tipo}
+                </Typography>
+                <Typography variant="h6" color="textPrimary" component="h4">
                   R$ {produto.preco}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
