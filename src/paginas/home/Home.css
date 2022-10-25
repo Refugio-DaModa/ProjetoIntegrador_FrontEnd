@@ -1,4 +1,4 @@
-.carrossel{
+.carrosselCima{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,13 +19,23 @@
   height: 100%;
   object-fit: cover;
 }
-.escolha {
+.amamos {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 2vw;
-  font-size: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 1vw;;
+  font-size: 2.5vw;
+}
+
+.carrosselBaixo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;  
+  margin-bottom: 1vw;
 }
 .carrosselLook{
   display: block;
@@ -79,10 +89,12 @@ p {
 .fundoBotao{
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #ffffff;
   margin: 2vw;
-  padding: 1vw;
-  border-radius: 1.5vw;
-  color: #ffffff;
+  border-radius: 0.7vw;
+  color: #000000;
   font-size: 1.2vw;
+  font-weight: 700;
+  width: 12vw;
+  height: 2vw;
 }
