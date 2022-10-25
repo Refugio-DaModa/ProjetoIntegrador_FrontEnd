@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Produto from '../../../model/Produto';
 import { busca } from '../../../services/Service'
-import { AppBar, Box, Grid, IconButton, InputBase, Toolbar } from '@mui/material';
+import { AppBar, Box, Grid, InputBase, Toolbar } from '@mui/material';
+import { alpha, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import './ListaMasculino.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
-import { createStyles, alpha, makeStyles, Theme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -16,12 +16,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import DeleteIcon from '@material-ui/icons/Delete';
 import { MoonLoader } from 'react-spinners';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import { isPropertySignature } from 'typescript';
 
 
 const useStyles = makeStyles({
@@ -61,7 +58,7 @@ const useStyles2 = makeStyles((theme: Theme) =>
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(1),
+        marginLeft: theme.spacing(5),
         width: 'auto',
       },
     },
@@ -80,29 +77,25 @@ const useStyles2 = makeStyles((theme: Theme) =>
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        width: '15ch',
+        width: '30ch',
         '&:focus': {
-          width: '16ch',
+          width: '31ch',
         },
       },
     },
   }),
 );
 
-export function ListaMasculino(props: any) {
-
-  
-
+export function ListaMasculino(props:any) {
 
   const [loading, setLoading] = useState(true)
   const classes = useStyles();
   const classes2 = useStyles2();
-  const [produto, setProdutos] = useState<any[]>([])
+  const [produto, setProdutos] = useState<Produto[]>([])
   let navigate = useNavigate();
 
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -118,7 +111,6 @@ export function ListaMasculino(props: any) {
     let filter = lowerCase
     console.log("filter: "+filter);
   }
-
 
   async function getProduto() {
     await busca("/produtos", setProdutos, {
@@ -141,13 +133,13 @@ export function ListaMasculino(props: any) {
 
     <div className={classes2.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className='pesquisa-produtos'>
           <div className={classes2.search}>
             <div className={classes2.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Buscar por título" onChange={handleFilter}
+              placeholder="Buscar itens masculinos" onChange={handleFilter}
               classes={{
                 root: classes2.inputRoot,
                 input: classes2.inputInput,
@@ -166,7 +158,7 @@ export function ListaMasculino(props: any) {
     <Grid container direction="row" justifyContent="center" alignItems="center" className='grid-equipe'>
 
       {
-
+        
         produto.filter((produto) => {
           return produto.nome.toLowerCase().includes(filter);
         })
@@ -198,7 +190,7 @@ export function ListaMasculino(props: any) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
+          <Button size="small" color="primary">
               Comprar
             </Button>
 
