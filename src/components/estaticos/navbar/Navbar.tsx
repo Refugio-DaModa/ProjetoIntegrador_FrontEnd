@@ -94,12 +94,12 @@ function Navbar() {
                     </Link>
                     <Link to="/formularioCategoria">
                         <Typography className="opcoesDropdown"> 
-                            Editar categorias
+                            Nova Categoria
                         </Typography> 
                     </Link>
                     <Link to="/formularioProduto">
                         <Typography className="opcoesDropdown"> 
-                            Editar produtos
+                            Novo Produto
                         </Typography> 
                     </Link>
                         <Typography onClick={goLogout} className="opcoesDropdown"> 

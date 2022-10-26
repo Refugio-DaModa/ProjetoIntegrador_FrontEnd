@@ -1,2 +1,12 @@
+.botao-finalizar-produto{
+    margin-top: 20px !important;
+    margin-left: 0px !important;
+    background-color: blueviolet !important;
+    border-radius: 20px !important;
+    color: white !important;
+}
 
+.botao-finalizar-produto:disabled{
+    background-color: gray !important;
+}
 

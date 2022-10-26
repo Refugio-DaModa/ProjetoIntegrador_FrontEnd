@@ -7,7 +7,6 @@ interface Produto
     descricao: string;
     nome: string;
     foto: string;
-    //Ver se a gente muda esse "number" do preço ou não:
     preco: number;
     quantidade: number;
     categoria?:Categoria|null;

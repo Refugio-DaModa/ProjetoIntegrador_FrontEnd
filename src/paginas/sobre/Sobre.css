@@ -213,17 +213,6 @@ body{
   cursor: pointer;
 }
 
-.container .card .contentBx .color span:nth-child(2){
-  background: #9bdc28;
-}
-
-.container .card .contentBx .color span:nth-child(3){
-  background: #03a9f4;
-}
-
-.container .card .contentBx .color span:nth-child(4){
-  background: #e91e63;
-}
 
 .container .card .contentBx a{
   display: inline-block;
@@ -268,3 +257,23 @@ body{
   margin-top: 120px;
 }
 
+.box-titulo-equipe{
+  padding: 2px ;
+  margin: 150px 30px 0px 30px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 20px;
+  background-color: rgb(136,6,191, 1);
+  box-shadow: 10px 10px 30px;
+
+}
+
+.titulo-equipe{
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 400 !important;
+  
+}

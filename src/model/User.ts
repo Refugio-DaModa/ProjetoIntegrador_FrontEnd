@@ -1,3 +1,5 @@
+import Produto from "./Produto";
+
 interface User 
 {
     id: number;
@@ -5,7 +7,8 @@ interface User
     usuario: string;
     data_nascimento: string;
     senha: string;
-    foto: string
+    foto: string;
+    produto?: Produto[]
 }
 
 export default User;

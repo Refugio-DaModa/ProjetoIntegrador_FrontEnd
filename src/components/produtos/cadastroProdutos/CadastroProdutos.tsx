@@ -8,6 +8,7 @@ import User from '../../../model/User';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core';
+import './CadastroProdutos.css'
 
 function CadastroProdutos() {
     
@@ -59,7 +60,7 @@ function CadastroProdutos() {
 
     const [user,setUser] = useState <User> (
         {
-            id:+userId,
+            id: +userId,
             nome:'',
             foto:'',
             usuario:'',
@@ -242,7 +243,7 @@ function CadastroProdutos() {
                     <Button 
                         type="submit"  
                         variant="contained" 
-                        color="primary" 
+                        className='botao-finalizar-produto'
                         disabled={categoria.id===0}
                     >
                         Finalizar

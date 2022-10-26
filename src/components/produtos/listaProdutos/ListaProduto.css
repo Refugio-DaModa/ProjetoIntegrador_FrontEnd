@@ -70,3 +70,10 @@
     flex-grow: 1;
     color:#FFFFFF;
 }
+
+.botao-atualizar-listaproduto{
+    margin-left: 10px !important;
+    background-color: blueviolet !important;
+    border-radius: 20px !important;
+    color: white !important;
+}

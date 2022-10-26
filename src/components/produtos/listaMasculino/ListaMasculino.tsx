@@ -197,7 +197,7 @@ export function ListaMasculino(props:any) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-          <Button size="small" color="primary">
+          <Button type="submit" variant="contained" className='botao-comprar'>
               Comprar
             </Button>
 

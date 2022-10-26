@@ -17,6 +17,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { GitHub } from '@mui/icons-material';
 import LinkedIn from '@material-ui/icons/LinkedIn';
+import { TypeFormatFlags } from 'typescript';
 
 
 
@@ -57,6 +58,11 @@ export function Sobre() {
 
   return (
     <>
+
+    {/* <Box className='box-titulo-equipe'>
+        <Typography gutterBottom variant="h5" component="h2" className='titulo-equipe' > Equipe Refúgio </Typography>
+
+    </Box> */}
     <Grid container direction="row" justifyContent="center" alignItems="center" className='margin-grid-equipe'>
     <Box className='box-equipe'>
       <div className="container">

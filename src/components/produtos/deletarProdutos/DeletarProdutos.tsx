@@ -48,13 +48,14 @@ function DeletarProdutos() {
         })
     }
   
-    function sim(){
-      navigate('/produtos')
-      deleteId(`/produtos/${id}`,{
+    async function sim(){
+      await deleteId(`/produtos/${id}`,{
         headers:{
           'Authorization': token
         }
+        
       });
+      navigate('/produtos')
       toast.success('Produto deletado com sucesso', {
         position: "top-right",
         autoClose: 2000,

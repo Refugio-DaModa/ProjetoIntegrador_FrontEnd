@@ -220,7 +220,7 @@ function ListaProduto(props: any) {
             </CardActionArea>
             <CardActions>
             <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
-              <Button size="small" color="primary">
+            <Button type="submit" variant="contained" className='botao-atualizar-listaproduto'>
                 Atualizar
               </Button>
             </Link>
