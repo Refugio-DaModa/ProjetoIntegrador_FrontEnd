@@ -107,6 +107,7 @@
     text-decoration: none;
     overflow: visible;
     z-index: 5;
+    cursor: pointer;
 }
 
 .opcoesDropdown:hover {
