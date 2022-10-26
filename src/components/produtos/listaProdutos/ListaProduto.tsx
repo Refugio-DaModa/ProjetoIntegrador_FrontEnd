@@ -156,7 +156,7 @@ function ListaProduto(props: any) {
 
   return (
     <>
-
+      
             <div className={'barra-com-pesquisa'}>
               <AppBar position="static" className='color-appbar'>
                 <Toolbar className='pesquisa-produtos'>

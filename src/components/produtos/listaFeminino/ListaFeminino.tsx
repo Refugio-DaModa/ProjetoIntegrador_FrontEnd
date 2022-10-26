@@ -136,7 +136,7 @@ export function ListaFeminino(props:any) {
         <Toolbar className='pesquisa-produtos'>
           <div className={classes2.search}>
             <div className={classes2.searchIcon}>
-              <SearchIcon />
+              <SearchIcon className='color-searchicon' />
             </div>
             <InputBase
               placeholder="Buscar itens femininos" onChange={handleFilter}
