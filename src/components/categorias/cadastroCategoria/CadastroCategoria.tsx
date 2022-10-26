@@ -98,17 +98,17 @@ function back()
     return(
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondasry" component="h1" align="center">Formulário de cadastro de Categoria</Typography>
-                <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id="tipo" label="Tipo" variant="outlined" 
+                <Typography variant="h3" color="textSecondasry" component="h1" align="center" className="margin-denuncia">Formulário de cadastro de Categoria</Typography>
+                <TextField value={categoria.tipo} className='margin-textfield' onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id="tipo" label="Tipo" variant="outlined" 
                 name="tipo" margin="normal" fullWidth />
-                   <label>Denúncia</label>
+                   <label className='denuncia-margin'>Denúncia</label>
                    <input 
                         type="checkbox"
                         checked={checked}
                         onChange={e => setChecked(e.target.checked)}
                     /> 
                 <Box>
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" className='botao-finalizar-categoria'>
                     Finalizar
                 </Button>
                 </Box>

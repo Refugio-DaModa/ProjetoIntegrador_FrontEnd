@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import Categoria from '../../../model/Categoria'; 
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import './ListaCategoria.css';
 import {useNavigate} from 'react-router-dom';
 import { busca } from '../../../services/Service';
@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
 import { BounceLoader } from 'react-spinners';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function ListaCategoria() {
   const [loading, setLoading] = useState(true)
@@ -54,19 +55,22 @@ function ListaCategoria() {
 
 {loading ? 
 
-<BounceLoader
-  className="loading-produtos"
-  color="#8806BF"
-  loading
-  size={80}
-  speedMultiplier={1}
-/> 
+      <BounceLoader
+        className="loading-produtos"
+        color="#8806BF"
+        loading
+        size={80}
+        speedMultiplier={1}
+      /> 
 
-: 
+: (
 
-     
+  <Grid container direction="row" justifyContent="center" alignItems="center" className='grid-equipe'>   
+
+  { 
+
     categorias.map(categoria =>(
-      <Box m={2} >
+      <Box m={2}>
         <Card variant="outlined" className='margin-categorias'>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
@@ -81,15 +85,15 @@ function ListaCategoria() {
 
               <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                  <Button variant="contained" className="cor-botao-categoria" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deleteCategoria/${categoria.id}`}  className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
+                  <Button  size='small' color="secondary">
+                    <DeleteIcon />
                   </Button>
                 </Box>
               </Link>
@@ -99,6 +103,10 @@ function ListaCategoria() {
       </Box>
     ))  
     }
+
+    </Grid>
+)
+  }
     </>
   );
 }

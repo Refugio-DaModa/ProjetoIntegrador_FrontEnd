@@ -4,4 +4,14 @@
 
 .margin-categorias{
     margin: 120px 10px 0px 20px;
+    box-shadow: 10px 10px 20px;
+}
+
+.cor-botao-categoria{
+    background-color: blueviolet !important;
+    border-radius: 20px !important;
+}
+
+.categoria-cards{
+    
 }

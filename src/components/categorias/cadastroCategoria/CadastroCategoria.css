@@ -1,4 +1,26 @@
-.topo
-{
+.topo{
     margin-top: 150px;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: rgb(150, 144, 144, 0.2);
+    box-shadow: 10px 10px 30px;
+    
+}
+    
+.botao-finalizar-categoria{
+    margin-top: 20px !important;
+    margin-left: 0px !important;
+    background-color: blueviolet !important;
+    border-radius: 20px !important;
+}
+
+.margin-denuncia{
+}
+
+.margin-textfield{
+    margin-bottom: 20px !important;
+}
+
+.denuncia-margin{
+    margin-left: 10px;
 }
