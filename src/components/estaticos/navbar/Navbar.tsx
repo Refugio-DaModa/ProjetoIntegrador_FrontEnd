@@ -24,7 +24,7 @@ function Navbar() {
 
     let navBarComponent 
     
-        navBarComponent = <AppBar position="static"> 
+        navBarComponent = <AppBar position="fixed"> 
 
 
     <div className="containerNavbar" style={{backgroundColor: '#8806BF'}}>   

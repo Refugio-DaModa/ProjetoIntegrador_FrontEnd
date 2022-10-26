@@ -74,7 +74,7 @@ function DeletarProdutos() {
      
     return (
       <>
-        <Box m={5}>
+        <Box m={5} style={{marginTop: '120px', marginLeft: '50px'}}>
           <Card variant="outlined" >
             <CardContent>
               <Box justifyContent="center">

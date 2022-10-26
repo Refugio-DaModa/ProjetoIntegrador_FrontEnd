@@ -6,6 +6,7 @@ import { toast } from "react-toastify"
 import Categoria from "../../../model/Categoria"
 import { buscaId, post, put } from "../../../services/Service"
 import { TokenState } from "../../../store/tokens/tokensReducer"
+import './CadastroCategoria.css';
 
 function CadastroCategoria()
 {
@@ -100,7 +101,7 @@ function back()
                 <Typography variant="h3" color="textSecondasry" component="h1" align="center">Formulário de cadastro de Categoria</Typography>
                 <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updateTema(e)} id="tipo" label="Tipo" variant="outlined" 
                 name="tipo" margin="normal" fullWidth />
-                   <label >Denúncia</label>
+                   <label>Denúncia</label>
                    <input 
                         type="checkbox"
                         checked={checked}

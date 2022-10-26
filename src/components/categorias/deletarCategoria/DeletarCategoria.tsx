@@ -74,7 +74,7 @@ function DeletarCategoria() {
      
     return (
       <>
-        <Box m={2}>
+        <Box m={2} style={{marginTop:'120px', marginLeft:'30px'}}>
           <Card variant="outlined" >
             <CardContent>
               <Box justifyContent="center">

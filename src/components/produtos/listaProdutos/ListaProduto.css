@@ -66,6 +66,7 @@
 }
 
 .barra-com-pesquisa{
+    margin-top: 110px;
     flex-grow: 1;
     color:#FFFFFF;
 }

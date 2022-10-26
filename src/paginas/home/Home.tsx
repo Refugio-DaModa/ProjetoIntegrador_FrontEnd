@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 
 function Home(){
   return(
-    <div>
+    <div className='navbar-fixo'>
       <div className="carrosselCima">
 
         <Swiper className="Swiper"

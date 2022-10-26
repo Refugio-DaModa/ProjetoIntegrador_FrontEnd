@@ -57,7 +57,7 @@ export function Sobre() {
 
   return (
     <>
-    <Grid container direction="row" justifyContent="center" alignItems="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center" className='margin-grid-equipe'>
     <Box className='box-equipe'>
       <div className="container">
         <div className="card">

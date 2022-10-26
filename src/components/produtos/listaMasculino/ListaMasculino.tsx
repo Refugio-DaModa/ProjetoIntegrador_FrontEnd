@@ -131,7 +131,7 @@ export function ListaMasculino(props:any) {
   return (
     <>
 
-    <div className={classes2.root}>
+    <div className='barra-com-pesquisa'>
       <AppBar position="static">
         <Toolbar className='pesquisa-produtos'>
           <div className={classes2.search}>

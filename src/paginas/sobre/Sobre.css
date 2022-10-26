@@ -122,7 +122,7 @@ body{
 }
 
 .container .card .imgBx img{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) ;
@@ -264,5 +264,7 @@ body{
     transform: scale(1.2);
 }
 
-
+.margin-grid-equipe{
+  margin-top: 120px;
+}
 

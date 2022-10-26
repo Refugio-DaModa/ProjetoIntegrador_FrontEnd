@@ -94,7 +94,7 @@ function CadastroUsuario()
         const [form, setForm] = useState(false)
 
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}}>
+        <Grid container direction="row" justifyContent="center" alignItems="center" style={{color:"#f5f5f5"}} className='topo-grid'>
             <Grid alignItems="center" xs={6}>
                 <Box paddingX={15} className="padding">
                     <form onSubmit={onSubmit} >

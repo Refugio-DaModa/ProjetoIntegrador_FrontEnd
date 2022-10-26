@@ -67,10 +67,10 @@ function ListaCategoria() {
      
     categorias.map(categoria =>(
       <Box m={2} >
-        <Card variant="outlined">
+        <Card variant="outlined" className='margin-categorias'>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Tema
+              Categoria
             </Typography>
             <Typography variant="h5" component="h2">
             {categoria.tipo}
