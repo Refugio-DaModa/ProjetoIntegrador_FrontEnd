@@ -66,7 +66,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Street clássico</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/feminino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -83,7 +83,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Casual fun</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/masculino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -100,7 +100,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Street College</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/feminino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -117,7 +117,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Elegante e sofisticado</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/masculino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -134,7 +134,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Confortável e clássico</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/infantil">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -151,7 +151,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Despojado e esportivo</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/feminino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -168,7 +168,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Elegante e ousado</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/infantil">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -184,8 +184,8 @@ function Home(){
             <img className="carrosselLook" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/Slides/Carrossel%20de%20baixo/16.jpg?raw=true" alt="" />
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
-                <h2 className="descLook">Últimas tendências da moda</h2>
-                <Link to="/produtos">
+                <h2 className="descLook">Trendy</h2>
+                <Link to="/produtos/feminino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
@@ -202,7 +202,7 @@ function Home(){
               <img className="blackHover" src="https://github.com/ManGiaco/BancoDeImagens/blob/main/Ref%C3%BAgio%20da%20Moda/%C3%8Dcones/black%20hover.png?raw=true" alt="" />
               <div className="text5">
                 <h2 className="descLook">Neo-rocker</h2>
-                <Link to="/produtos">
+                <Link to="/produtos/feminino">
                   <Button className="botaoLook" type="submit">
                     <div className="fundoBotao">
                       COMPRAR LOOK
