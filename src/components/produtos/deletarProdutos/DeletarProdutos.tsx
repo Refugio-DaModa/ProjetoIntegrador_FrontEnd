@@ -11,6 +11,8 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import Produto from '../../../model/Produto';
 
 function DeletarProdutos() {
+
+  const[clicou, setClicou] = useState(false)
     let navigate = useNavigate();
     const {id} = useParams<{id: string}>();
     const [produto, setProduto] = useState<Produto>()
@@ -49,6 +51,7 @@ function DeletarProdutos() {
     }
   
     async function sim(){
+      setClicou(true)
       await deleteId(`/produtos/${id}`,{
         headers:{
           'Authorization': token
@@ -88,7 +91,7 @@ function DeletarProdutos() {
             <CardActions>
               <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                 <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='small' color="primary">
+                <Button onClick={sim} variant="contained" className="marginLeft" size='small' color="primary" disabled={clicou}>
                   Sim
                 </Button>
                 </Box>

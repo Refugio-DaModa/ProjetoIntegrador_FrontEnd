@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarCategoria() {
+  const[clicou, setClicou] = useState(false)
     let navigate = useNavigate();
     const {id} = useParams<{id: string}>();
     const [categoria, setCategoria] = useState<Categoria>()
@@ -48,13 +49,14 @@ function DeletarCategoria() {
         })
     }
   
-    function sim(){
-      navigate('/categorias')
-      deleteId(`/categorias/${id}`,{
+    async function sim(){
+      setClicou(true)
+      await deleteId(`/categorias/${id}`,{
         headers:{
           'Authorization': token
         }
       });
+      navigate('/categorias')
       toast.success('Categoria deletada com sucesso', {
         position: "top-right",
         autoClose: 2000,
@@ -90,7 +92,7 @@ function DeletarCategoria() {
             <CardActions>
               <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                 <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary" disabled={clicou}>
                   Sim
                 </Button>
                 </Box>

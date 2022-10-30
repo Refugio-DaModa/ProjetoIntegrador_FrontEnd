@@ -13,6 +13,7 @@ import './CadastroProdutos.css'
 function CadastroProdutos() {
     
     let navigate = useNavigate ()
+    const[clicou, setClicou] = useState(false)
     const {id} = useParams <{id:string}>()
     const [categorias,setCategorias] = useState <Categoria []> ([])
     const token = useSelector <TokenState,TokenState["tokens"]> (
@@ -112,9 +113,9 @@ function CadastroProdutos() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-
+        setClicou(true)
         if (id !== undefined) {
-            put(`/produtos`, produto, setProduto, {
+            await put(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
@@ -130,7 +131,7 @@ function CadastroProdutos() {
                 progress: undefined
             });
         } else {
-            post(`/produtos`, produto, setProduto, {
+           await post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
@@ -244,7 +245,7 @@ function CadastroProdutos() {
                         type="submit"  
                         variant="contained" 
                         className='botao-finalizar-produto'
-                        disabled={categoria.id===0}
+                        disabled={categoria.id===0 || clicou}
                     >
                         Finalizar
                     </Button>
