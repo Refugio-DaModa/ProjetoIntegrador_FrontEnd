@@ -5,7 +5,7 @@ import { busca } from '../../../services/Service'
 import { AppBar, Box, Grid, InputBase, Toolbar } from '@mui/material';
 import './ListaProduto.css';
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'; 
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import { createStyles, alpha, makeStyles, Theme } from '@material-ui/core/styles';
