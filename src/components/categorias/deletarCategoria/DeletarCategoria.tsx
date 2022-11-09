@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 import Categoria from '../../../model/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { ClipLoader } from 'react-spinners';
 
 function DeletarCategoria() {
   const[clicou, setClicou] = useState(false)
@@ -94,6 +95,7 @@ function DeletarCategoria() {
                 <Box mx={2}>
                 <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary" disabled={clicou}>
                   Sim
+                  {clicou?<ClipLoader color="#4f5150" size={20} className='espacoloader' /> :''}
                 </Button>
                 </Box>
                 <Box>

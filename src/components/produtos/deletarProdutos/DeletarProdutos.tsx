@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Produto from '../../../model/Produto';
+import { ClipLoader } from 'react-spinners';
 
 function DeletarProdutos() {
 
@@ -93,6 +94,7 @@ function DeletarProdutos() {
                 <Box mx={2}>
                 <Button onClick={sim} variant="contained" className="marginLeft" size='small' color="primary" disabled={clicou}>
                   Sim
+                  {clicou?<ClipLoader color="#4f5150" size={20} className='espacoloader' /> :''}
                 </Button>
                 </Box>
                 <Box>

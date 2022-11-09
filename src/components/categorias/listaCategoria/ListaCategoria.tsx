@@ -44,6 +44,7 @@ function ListaCategoria() {
       }
     })
     setLoading(false)
+    
   }
 
   useEffect(()=>{

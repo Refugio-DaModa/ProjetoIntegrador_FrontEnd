@@ -19,6 +19,7 @@ import Categoria from "../../../model/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import "./CadastroCategoria.css";
+import { ClipLoader } from 'react-spinners';
 
 function CadastroCategoria() {
 
@@ -158,6 +159,7 @@ function CadastroCategoria() {
             disabled={clicou}
           >
             Finalizar
+            {clicou?<ClipLoader color="#4f5150" size={20} className='espacoloader' /> :''}
           </Button>
         </Box>
       </form>

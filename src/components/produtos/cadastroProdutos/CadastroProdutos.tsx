@@ -9,6 +9,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { Button, Container, FormControl, FormHelperText, InputLabel, MenuItem, Select, TextField, Typography } from '@material-ui/core';
 import './CadastroProdutos.css'
+import { ClipLoader } from 'react-spinners';
 
 function CadastroProdutos() {
     
@@ -248,6 +249,7 @@ function CadastroProdutos() {
                         disabled={categoria.id===0 || clicou}
                     >
                         Finalizar
+                        {clicou?<ClipLoader color="#4f5150" size={20} className='espacoloader' /> :''}
                     </Button>
                 </FormControl>
             </form>
